@@ -1,0 +1,35 @@
+{
+  "name": "svelte-portfolio",
+  "version": "0.0.1",
+  "scripts": {
+    "dev:only": "svelte-kit dev",
+    "build:only": "svelte-kit build",
+    "preview": "svelte-kit preview",
+    "tailwind:watch": "cross-env TAILWIND_MODE=watch cross-env NODE_ENV=development postcss src/styles/tailwind.css -o src/styles/tailwind-output.css -w",
+    "tailwind:build": "cross-env TAILWIND_MODE=build cross-env NODE_ENV=production postcss src/styles/tailwind.css -o src/styles/tailwind-output.css",
+    "dev": "concurrently \"yarn run dev:only\" \"yarn run tailwind:watch\"",
+    "build": "yarn run tailwind:build && yarn run build:only"
+  },
+  "devDependencies": {
+    "@iconify/svelte": "^2.1.0",
+    "@sveltejs/adapter-auto": "next",
+    "@sveltejs/kit": "next",
+    "autoprefixer": "^10.4.0",
+    "concurrently": "^6.5.1",
+    "cross-env": "^7.0.3",
+    "eslint": "^7.32.0",
+    "eslint-config-prettier": "^8.3.0",
+    "eslint-plugin-svelte3": "^3.2.1",
+    "node-sass": "^7.0.0",
+    "postcss-cli": "^9.1.0",
+    "postcss-load-config": "^3.1.0",
+    "prettier": "^2.4.1",
+    "prettier-plugin-svelte": "^2.4.0",
+    "sass": "^1.45.0",
+    "svelte": "^3.44.0",
+    "svelte-preprocess": "^4.10.1",
+    "svelte-preprocess-sass": "^2.0.1",
+    "tailwindcss": "^3.0.7"
+  },
+  "type": "module"
+}
