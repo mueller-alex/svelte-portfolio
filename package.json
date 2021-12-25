@@ -13,6 +13,8 @@
   "devDependencies": {
     "@iconify/svelte": "^2.1.0",
     "@sveltejs/adapter-auto": "next",
+    "@sveltejs/adapter-netlify": "^1.0.0-next.36",
+    "@sveltejs/adapter-static": "^1.0.0-next.22",
     "@sveltejs/kit": "next",
     "autoprefixer": "^10.4.0",
     "concurrently": "^6.5.1",
