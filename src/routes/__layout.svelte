@@ -15,7 +15,7 @@
         class:shrunk
         >
         <a href="/">
-            <svg width="48" height="48" viewBox="0 0 129 129" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <svg class="transition-all" width="48" height="48" viewBox="0 0 129 129" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <path d="M91.2209 109.136C90.4412 108.668 89.8553 107.936 89.5698 107.073L65.2842 33.6322C64.9573 32.6436 63.5603 32.6391 63.227 33.6255L38.4016 107.089C38.1133 107.942 37.5308 108.665 36.7584 109.128L5.81014 127.695C2.549 129.651 -1.2435 126.13 0.46685 122.734L61.0574 2.41476C62.4642 -0.378661 66.4567 -0.367443 67.8477 2.43384L127.627 122.823C129.313 126.219 125.526 129.716 122.274 127.765L91.2209 109.136Z" fill="currentColor"/>
             </svg></a>
     </nav>
@@ -35,6 +35,9 @@
         @media (prefers-color-scheme: dark)
             background: hsla(200, 7%, 8%, .8)
         backdrop-filter: blur(20px) !important
+        svg
+            height: 32px
+            width: 32px
     
     :global(html) 
         height: 100%

@@ -22,8 +22,16 @@
             key: 'dog-lane',
             name: 'Dog Lane Cafe',
             subtitle: 'Branding',
-            color: '#F87C56'
+            color: '#F87C56',
+            textColor: '#701B00'
         },
+        {
+            key: 'tondo',
+            name: 'Tondo',
+            subtitle: 'Icongraphy',
+            color: '#FFC400',
+            textColor: '#ab5600'
+        }
     ]
 
 </script>
