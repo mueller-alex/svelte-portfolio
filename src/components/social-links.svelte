@@ -1,54 +1,65 @@
 <script>
 	export let flexDirection = 'row';
 	import Icon from '@iconify/svelte';
+	import emailIcon from '@iconify/icons-mdi/email';
+	import linkedinIcon from '@iconify/icons-mdi/linkedin';
+	import githubIcon from '@iconify/icons-mdi/github';
+	import behanceIcon from '@iconify/icons-mdi/behance';
+	import twitterIcon from '@iconify/icons-mdi/twitter';
+	import Card from './card.svelte';
 </script>
 
-<div
-	id="social-icons"
-	style="flex-direction: {flexDirection};"
-	class="bg-mueller-50 dark:bg-mueller-700 text-[28px] leading-7 shadow-lg p-3 flex gap-2 rounded-[1.25rem] w-max border-2 border-white/5"
->
+<Card class="flex gap-4 text-3xl flex-{flexDirection}">
 	<a
 		href="mailto:contact@almr.design"
-		id="mail-icon"
-		class="text-mueller-900 dark:text-mueller-100 hover:text-mueller-100 inline-flex items-center justify-center min-w-[48px] h-12 rounded-xl transition-colors focus:outline-none focus:scale-[1.2]"
+		title="Email"
+		class="grid place-items-center rounded-2xl p-[10px] transition-colors hover:bg-red-50 hover:text-red-900 focus:scale-[1.2] focus:outline-none dark:text-mueller-100"
 	>
-		<Icon icon="mdi:email" />
+		<Icon icon="eva:at-fill" />
+		<!-- <Icon icon={emailIcon} /> -->
 	</a>
 	<a
 		href="https://www.linkedin.com/in/alexmueller392/"
-		id="linkedin-icon"
-		class="text-mueller-900 dark:text-mueller-100 hover:text-mueller-100 inline-flex items-center justify-center min-w-[48px] h-12 rounded-xl transition-colors focus:outline-none focus:scale-[1.2]"
+		title="LinkedIn"
+		class="grid place-items-center rounded-2xl p-[10px] transition-colors hover:bg-cyan-50 hover:text-[#0077b5] focus:scale-[1.2] focus:outline-none dark:text-mueller-100"
 	>
-		<Icon icon="mdi:linkedin" />
+		<Icon icon="eva:linkedin-fill" />
+		<!-- <Icon icon={linkedinIcon} /> -->
 	</a>
 	<a
 		href="https://github.com/mueller-alex"
-		id="github-icon"
-		class="text-mueller-900 dark:text-mueller-100 hover:text-mueller-100 inline-flex items-center justify-center min-w-[48px] h-12 rounded-xl transition-colors focus:outline-none focus:scale-[1.2]"
+		title="GitHub"
+		class="grid place-items-center rounded-2xl p-[10px] transition-colors hover:bg-black/5 hover:text-black focus:scale-[1.2] focus:outline-none dark:text-mueller-100 hover:dark:bg-white"
 	>
-		<Icon icon="mdi:github" />
+		<Icon icon="uim:github-alt" />
+		<!-- <Icon icon={githubIcon} /> -->
 	</a>
 	<a
 		href="https://www.behance.net/muelleralex"
-		id="behance-icon"
-		class="text-mueller-900 dark:text-mueller-100 hover:text-mueller-100 inline-flex items-center justify-center min-w-[48px] h-12 rounded-xl transition-colors focus:outline-none focus:scale-[1.2]"
+		class="grid place-items-center rounded-2xl p-[10px] transition-colors hover:bg-blue-50 hover:text-[#1769ff] focus:scale-[1.2] focus:outline-none dark:text-mueller-100"
 	>
-		<Icon icon="mdi:behance" />
+		<Icon icon="ph:behance-logo-bold" />
+		<!-- <Icon icon={behanceIcon} /> -->
 	</a>
 	<a
 		href="https://twitter.com/almrdesign"
-		id="twitter-icon"
-		class="text-mueller-900 dark:text-mueller-100 hover:text-mueller-100 inline-flex items-center justify-center min-w-[48px] h-12 rounded-xl transition-colors focus:outline-none focus:scale-[1.2]"
+		title="Twitter"
+		class="grid place-items-center rounded-2xl p-[10px] text-mueller-900 transition-colors hover:bg-sky-50 hover:text-[#1da1f2] focus:scale-[1.2] focus:outline-none dark:text-mueller-100"
 	>
-		<Icon icon="mdi:twitter" />
+		<Icon icon="eva:twitter-fill" />
+		<!-- <Icon icon={twitterIcon} /> -->
 	</a>
-</div>
-
+</Card>
+<!-- 
+<div
+	style:flex-direction={flexDirection}
+	class="flex w-max max-w-full justify-between gap-2 rounded-[1.25rem] border-[1px] border-white/5 bg-mueller-10 p-3 text-[28px] leading-7 shadow-lg dark:bg-mueller-700 sm:gap-4"
+/> -->
+<!-- 
 <style lang="sass">
     @use './static/colors/brand-colors.scss' as c
     @each $brand,$color in c.$brand-colors
-        ##{$brand}-icon
+        .#{$brand}-icon
             &:hover, &:focus
                 background: $color
-</style>
+</style> -->

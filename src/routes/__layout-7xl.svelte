@@ -32,9 +32,7 @@
 		class:bg-cobalt-50={shrunk}
 		class:dark:bg-cobalt-800={shrunk}
 	>
-		<div
-			class="mx-auto flex h-full max-w-[1920px] items-center justify-between px-6 transition-all"
-		>
+		<div class="mx-auto flex h-full max-w-7xl items-center justify-between px-6 transition-all">
 			<a href="/#" title="Home">
 				<svg
 					class="transition-all"
@@ -109,7 +107,7 @@
 			</button>
 		</div>
 	</nav>
-	<div id="app-container" class="mx-auto w-screen max-w-[1920px] px-6">
+	<div id="app-container" class="mx-auto w-screen max-w-7xl px-6">
 		<slot />
 	</div>
 </div>

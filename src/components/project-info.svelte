@@ -1,79 +1,85 @@
-<script context="module">
-	export class Chip {
-		constructor(icon, color, text) {
-			this.icon = icon;
-			this.color = color;
-			this.text = text;
-		}
-	}
-</script>
-
-<script>
+<script lang="ts">
 	import Button from './button.svelte';
 	import IconChip from './icon-chip.svelte';
 	import Icon from '@iconify/svelte';
-	export let link = '';
-	export let linkText = '';
-	export let color = '';
-	export let role = '';
-	export let skills = '';
-	export let timeline = '';
-	// function to lighten hex color by a percentage
-	function lighten(color, percent) {
-		var f = parseInt(color.slice(1), 16),
-			t = percent < 0 ? 0 : 255,
-			p = percent < 0 ? percent * -1 : percent,
-			R = f >> 16,
-			G = (f >> 8) & 0x00ff,
-			B = f & 0x0000ff;
-		return (
-			'#' +
-			(
-				0x1000000 +
-				(Math.round((t - R) * p) + R) * 0x10000 +
-				(Math.round((t - G) * p) + G) * 0x100 +
-				(Math.round((t - B) * p) + B)
-			)
-				.toString(16)
-				.slice(1)
-		);
-	}
+	import type { Project } from '../projects';
+	import Card from './card.svelte';
+	export let project: Project;
 </script>
 
-<h1 class="text-4xl uppercase font-extrabold px-4 text-center tracking-[.35rem] w-full my-8 ">
-	Overview
+<h1 class="my-8 flex w-full gap-3 text-4xl font-extrabold uppercase tracking-[.35rem]">
+	<span class="material-symbols-rounded text-4xl"> description </span> Overview
 </h1>
-<div
-	class="flex flex-col flex-wrap md:flex-row md:justify-between md:gap-8 py-8 space-y-3 md:space-y-0"
->
-	<div id="role" class="flex flex-col items-center flex-1">
-		<IconChip icon="mdi-clipboard-account" />
-		<h6 class="text-md uppercase tracking-widest font-bold mt-1">Role</h6>
-		<div>
-			{role}
-		</div>
+<div class="grid w-full grid-cols-10 gap-8">
+	<div class="col-span-3 flex w-full flex-col items-center gap-4">
+		<Card class="flex w-full items-center gap-3 p-4 pr-5">
+			<span class="material-symbols-rounded text-[32px]"> account_circle </span>
+			<div class="">
+				<p class="text-sm font-bold uppercase tracking-widest opacity-70">Role</p>
+				<p class="text-lg font-medium tracking-wider">{project.role}</p>
+			</div>
+		</Card>
+		<Card class="flex w-full items-center gap-3 p-4 pr-5">
+			<span class="material-symbols-rounded text-[32px]"> date_range </span>
+			<div class="">
+				<p class="text-sm font-bold uppercase tracking-widest opacity-70">Timeline</p>
+				<p class="text-lg font-medium tracking-wider">{project.timeline}</p>
+			</div>
+		</Card>
+		<Card class="flex w-full items-center gap-3 p-4 pr-5">
+			<span class="material-symbols-rounded text-[32px]"> hardware </span>
+			<div class="">
+				<p class="text-sm font-bold uppercase tracking-widest opacity-70">Skills</p>
+				<p class="text-lg font-medium tracking-wider">{project.skills}</p>
+			</div>
+		</Card>
+		{#if project.link}
+			<Card
+				class="transition-transform hover:scale-105"
+				href={project.link[0]}
+				background={project.backgroundColor}
+				color={project.textColor}
+			>
+				<p
+					class="flex items-center gap-3 px-2 text-lg font-bold uppercase tracking-[.15rem] text-white "
+				>
+					{project.link[1]}
+					<span class="material-symbols-rounded text-3xl"> open_in_new </span>
+				</p>
+			</Card>
+		{/if}
 	</div>
-	<div id="timeline" class="flex flex-col items-center flex-1">
-		<IconChip icon="mdi:calendar-range" />
-		<h6 class="text-md uppercase tracking-widest font-bold mt-1">Timeline</h6>
-		<div>
-			{timeline}
-		</div>
+	<div class="col-span-7">
+		<slot name="overview" />
 	</div>
-	<div id="skills" class="flex flex-col items-center flex-1">
-		<IconChip icon="mdi:code" />
-		<h6 class="text-md uppercase tracking-widest font-bold mt-1">Skills Used</h6>
-		<div>{skills}</div>
-	</div>
-	<!-- <div class="flex items-center gap-2 flex-wrap">
-        {#each skills as skill}
-        <IconChip icon={skill.icon} color={skill.color} text={skill.text}/>
-        {/each}
-    </div> -->
 </div>
-<slot />
-{#if link}
-	<div id="link" class="flex flex-col items-center mt-8">
-		<Button text={linkText} href={link} rightIcon="ic:round-open-in-new" {color} />
+{#if project.link && false}
+	<h1 class="my-8 w-full px-4 text-center text-4xl font-extrabold uppercase tracking-[.35rem]">
+		Preview
+	</h1>
+	<iframe
+		src={project.link[0]}
+		frameborder="0"
+		class="aspect-video w-full rounded-2xl border-[1px] border-white/5 shadow-lg"
+		title={project.name}
+	/>
+	<div id="link" class="mt-8 flex flex-col items-center">
+		<Button
+			href={project.link[0]}
+			text={project.link[1]}
+			rightIcon="open_in_new"
+			background={project.backgroundColor}
+			color={project.textColor}
+			padding="3"
+		/>
 	</div>
+{/if}
+{#if $$slots.background}
+	<h1 class="my-8 w-full px-4 text-center text-4xl font-extrabold uppercase tracking-[.35rem]">
+		Background
+	</h1>
+	<slot name="background" />
+{/if}
+{#if $$slots.gallery}
+	<slot name="gallery" />
 {/if}

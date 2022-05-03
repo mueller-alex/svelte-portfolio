@@ -1,7 +1,11 @@
 <script>
+	import SocialLinks from './../components/social-links.svelte';
 	import Profile from '../components/profile.svelte';
 </script>
 
+<svelte:head>
+	<title>About | ALMR Design</title>
+</svelte:head>
 <Profile noSocials />
 <!-- <iframe
 	class="w-full bg-transparent"
