@@ -40,7 +40,7 @@
 	</div>
 	<div class="order-first flex max-h-full justify-center md:order-last ">
 		<img
-			src="../projects/{project.key}.png"
+			src="/projects/{project.key}.png"
 			alt=""
 			loading="lazy"
 			class="max-h-full w-auto origin-right object-cover py-4 px-16 transition-transform group-hover:scale-[1.1] md:p-16"

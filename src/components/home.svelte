@@ -3,6 +3,19 @@
 	import SocialLinks from '../components/social-links.svelte';
 	export let noSocials = false;
 	import Icon from '@iconify/svelte';
+	import { fly, fade } from 'svelte/transition';
+	let words = ['build', 'create', 'ship', 'design'];
+	let word = 'build';
+	let icons = ['build', 'create', 'rocket_launch', 'draw'];
+	let icon = 'build';
+	setInterval(() => {
+		// increase index by 1 and loop
+		let index = Math.floor(Math.random() * words.length);
+		word === words[index] ? (index = (index + 1) % words.length) : (word = words[index]);
+		icon === icons[index] ? (index = (index + 1) % icons.length) : (icon = icons[index]);
+		word = words[index];
+		icon = icons[index];
+	}, 4000);
 </script>
 
 <div class="flex min-h-[40vh] max-w-full items-center ">
@@ -11,17 +24,32 @@
 	>
 		<div class="flex flex-col items-center justify-center md:block">
 			<h1
-				class="text-center text-5xl font-extrabold lowercase leading-snug tracking-widest md:text-left"
+				class="flex flex-col text-center text-5xl font-extrabold lowercase leading-tight tracking-widest md:text-left"
 			>
-				<span class="material-symbols-rounded text-5xl leading-none">
+				<!-- <span class="material-symbols-rounded text-5xl leading-none">
 					<div class="animate-[bounce_7s_ease_infinite_reverse]">
 						<div class="translate-y-3 -rotate-45">
 							<Icon icon="uis:rocket" />
+							<!-- <div class="-rotate-45  drop-shadow">rocket_launch</div> 
 						</div>
-						<!-- <div class="-rotate-45  drop-shadow">rocket_launch</div> -->
 					</div>
-				</span>
-				<br class="sm:hidden" />let's ship something!
+				</span> -->
+				{#key word}
+					<span
+						class="material-symbols-rounded text-5xl leading-none"
+						in:fly={{ x: -20, duration: 1000 }}
+					>
+						{icon}
+					</span>
+				{/key}
+				<br class="sm:hidden" />
+				<span>let's</span>
+				{#key word}
+					<span class="" in:fly={{ x: -20, duration: 1000, delay: 250 }}>
+						{word}
+					</span>
+				{/key}
+				<span>something.</span>
 			</h1>
 			<p
 				class="my-6 max-w-[min(100%,45ch)] text-center text-xl font-medium leading-relaxed md:text-left"
@@ -35,7 +63,7 @@
 		</div>
 		<div class="order-first ml-auto max-w-[80%] pb-4 md:order-last md:max-w-[100%] md:p-0 md:py-16">
 			<img
-				src="../flash.jpg"
+				src="/flash.jpg"
 				alt=""
 				id="pfp"
 				class="wobble aspect-square w-full object-cover outline outline-[32px] outline-mueller-100 dark:outline-mueller-900 "
@@ -52,7 +80,7 @@
 /> -->
 <style lang="sass">
 	#pfp 
-		mask-image: url(../blob.svg)
+		mask-image: url(/blob.svg)
 		mask-size: 115%
 		mask-position: center
 	.wobble

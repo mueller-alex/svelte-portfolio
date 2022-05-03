@@ -11,13 +11,10 @@
 	let shrunk = false;
 	let menu = false;
 	function toggle() {
-		console.log(menu);
-		console.log('->');
 		menu = !menu;
-		console.log(menu);
 	}
 	$: {
-		shrunk = y > 128 ? true : false;
+		shrunk = y > 128;
 	}
 </script>
 
@@ -33,7 +30,7 @@
 		class:dark:bg-cobalt-800={shrunk}
 	>
 		<div
-			class="mx-auto flex h-full max-w-[1920px] items-center justify-between px-6 transition-all"
+			class="mx-auto flex h-full max-w-screen-2xl items-center justify-between px-6 transition-all"
 		>
 			<a href="/#" title="Home">
 				<svg
@@ -109,7 +106,7 @@
 			</button>
 		</div>
 	</nav>
-	<div id="app-container" class="mx-auto w-screen max-w-[1920px] px-6">
+	<div id="app-container" class="mx-auto w-screen max-w-screen-2xl px-6">
 		<slot />
 	</div>
 </div>
@@ -142,6 +139,7 @@
 		height: 100%
 		scroll-padding-top: 96px
 		scroll-behavior: smooth
+		scrollbar-width: thin
 		background-attachment: fixed
 		// background-size: auto
 		// background-size: 8px 8px
