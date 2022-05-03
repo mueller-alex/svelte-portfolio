@@ -1,11 +1,6 @@
 <script>
 	export let flexDirection = 'row';
 	import Icon from '@iconify/svelte';
-	import emailIcon from '@iconify/icons-mdi/email';
-	import linkedinIcon from '@iconify/icons-mdi/linkedin';
-	import githubIcon from '@iconify/icons-mdi/github';
-	import behanceIcon from '@iconify/icons-mdi/behance';
-	import twitterIcon from '@iconify/icons-mdi/twitter';
 	import Card from './card.svelte';
 </script>
 
