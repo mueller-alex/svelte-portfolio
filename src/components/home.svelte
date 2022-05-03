@@ -4,9 +4,9 @@
 	export let noSocials = false;
 	import Icon from '@iconify/svelte';
 	import { fly, fade } from 'svelte/transition';
-	let words = ['build', 'create', 'ship', 'design'];
+	let words = ['build', 'code', 'ship', 'design'];
 	let word = 'build';
-	let icons = ['build', 'create', 'rocket_launch', 'draw'];
+	let icons = ['build', 'code', 'rocket_launch', 'draw'];
 	let icon = 'build';
 	setInterval(() => {
 		// increase index by 1 and loop
@@ -22,10 +22,8 @@
 	<div
 		class="mx-auto flex w-full flex-col items-center justify-center md:grid md:grid-cols-[3fr_2fr] md:items-center md:gap-x-4"
 	>
-		<div class="flex flex-col items-center justify-center md:block">
-			<h1
-				class="flex flex-col text-center text-5xl font-extrabold lowercase leading-tight tracking-widest md:text-left"
-			>
+		<div class="flex flex-col items-start justify-center md:block">
+			<h1 class="flex flex-col text-5xl font-extrabold lowercase leading-tight tracking-widest">
 				<!-- <span class="material-symbols-rounded text-5xl leading-none">
 					<div class="animate-[bounce_7s_ease_infinite_reverse]">
 						<div class="translate-y-3 -rotate-45">
@@ -42,18 +40,15 @@
 						{icon}
 					</span>
 				{/key}
-				<br class="sm:hidden" />
 				<span>let's</span>
 				{#key word}
 					<span class="" in:fly={{ x: -20, duration: 1000, delay: 250 }}>
 						{word}
 					</span>
 				{/key}
-				<span>something.</span>
+				<span>something</span>
 			</h1>
-			<p
-				class="my-6 max-w-[min(100%,45ch)] text-center text-xl font-medium leading-relaxed md:text-left"
-			>
+			<p class="my-6 max-w-[min(100%,45ch)] text-xl font-medium leading-relaxed">
 				I'm a UX engineer. I love taking apps from an idea to a fully fleshed out project.
 			</p>
 			{#if !noSocials}
@@ -61,7 +56,9 @@
 			{/if}
 			<!-- <Button text="View Resume" classes="mt-4"/> -->
 		</div>
-		<div class="order-first ml-auto max-w-[80%] pb-4 md:order-last md:max-w-[100%] md:p-0 md:py-16">
+		<div
+			class="order-first mx-auto max-w-[80%] pb-4 md:order-last md:mr-0 md:max-w-[100%] md:p-0 md:py-16"
+		>
 			<img
 				src="/flash.jpg"
 				alt=""
