@@ -10,7 +10,7 @@
 <h1 class="my-8 flex w-full gap-3 text-4xl font-extrabold uppercase tracking-[.35rem]">
 	<span class="material-symbols-rounded text-4xl"> description </span> Overview
 </h1>
-<div class="grid w-full grid-cols-10 gap-8">
+<div class="flex w-full grid-cols-10 flex-col gap-8 md:grid">
 	<div class="col-span-3 flex w-full flex-col items-center gap-4">
 		<Card class="flex w-full items-center gap-3 p-4 pr-5">
 			<span class="material-symbols-rounded text-[32px]"> account_circle </span>

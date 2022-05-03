@@ -19,7 +19,7 @@
 </script>
 
 <svelte:window bind:scrollY={y} />
-<div class="text-cobalt-600 dark:text-cobalt-50">
+<div class="relative overflow-clip text-cobalt-600 dark:text-cobalt-50">
 	<nav
 		class="sticky top-0 z-50 h-32 w-full border-b-cobalt-900/5 dark:border-b-white/5
 		{shrunk ? 'border-b-[1px]' : ''} 
@@ -46,7 +46,7 @@
 					/>
 				</svg>
 			</a>
-			<div class="hidden space-x-6 sm:flex">
+			<div class="hidden space-x-6 md:flex">
 				<a
 					href="/"
 					class="flex items-center gap-2 rounded-lg p-4 pb-[14px] text-xl font-bold lowercase tracking-widest transition-colors hover:bg-cobalt-600/10 hover:dark:bg-white/10"
@@ -70,13 +70,16 @@
 				</a>
 			</div>
 			<button
-				class="relative z-20 grid aspect-square h-12 w-12 place-items-center sm:hidden"
-				on:click={toggle}
+				class="relative z-20 grid aspect-square h-12 w-12 place-items-center md:hidden"
+				on:click={() => {
+					toggle();
+					shrunk = true;
+				}}
 			>
 				<div class="material-symbols-rounded w-8 text-3xl leading-none">menu</div>
 				{#if menu}
 					<div
-						class="absolute top-0 right-0 flex w-max flex-col rounded-2xl bg-white py-2 shadow dark:bg-cobalt-700"
+						class="absolute top-0 right-0 flex w-max flex-col rounded-2xl bg-white py-2 shadow dark:bg-cobalt-600"
 						transition:fade={{ duration: 150 }}
 						id="menu"
 					>
@@ -106,20 +109,25 @@
 			</button>
 		</div>
 	</nav>
-	<div id="app-container" class="mx-auto w-screen max-w-screen-2xl px-6">
+	<div id="app-container" class="mx-auto w-full max-w-screen-2xl px-6">
 		<slot />
 	</div>
 </div>
 {#if dev}
-	<Card class="fixed bottom-4 right-4 flex items-center gap-2">
+	<Card
+		class="fixed bottom-4 right-4 flex items-center gap-2 rounded-full !bg-amber-500 text-xl font-bold tracking-wider !text-black"
+	>
 		<span class="material-symbols-rounded"> construction </span>
-		dev
+		DEV
 	</Card>
 {/if}
 {#if menu}
 	<div
 		class="fixed inset-0 z-10 bg-white/50 dark:bg-black/50"
-		on:click={toggle}
+		on:click={() => {
+			toggle();
+			shrunk = y > 128;
+		}}
 		transition:fade={{ duration: 150 }}
 	/>
 {/if}
@@ -140,6 +148,8 @@
 		scroll-padding-top: 96px
 		scroll-behavior: smooth
 		scrollbar-width: thin
+		scrollbar-gutter: stable
+		scrollbar-color: transparent
 		background-attachment: fixed
 		// background-size: auto
 		// background-size: 8px 8px

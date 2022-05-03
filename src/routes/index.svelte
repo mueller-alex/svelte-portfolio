@@ -15,7 +15,7 @@
 </script>
 
 <svelte:head>
-	<title>ALMR Design</title>
+	<title>muellr</title>
 </svelte:head>
 <Home />
 <Card
