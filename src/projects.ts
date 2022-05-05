@@ -1,7 +1,7 @@
 export interface Project {
 	hidden: boolean;
 	key: string;
-	projectType: 'work' | 'project';
+	projectType: 'design' | 'dev' | 'both' | 'other';
 	name: string;
 	subtitle: string;
 	link?: [string, string];
@@ -15,8 +15,21 @@ export interface Project {
 export const projects: Project[] = [
 	{
 		hidden: false,
+		key: 'this',
+		projectType: 'both',
+		name: 'muellr.xyz',
+		subtitle: 'Front End Development',
+		link: ['/', 'Visit muellr.xyz'],
+		backgroundColor: 'hsl(225, 30%, 15%)',
+		role: 'Front End Engineer',
+		timeline: 'Feb 2020 - May 2022',
+		skills: 'Svelte, TailwindCSS',
+		overview: ['muellr.xyz']
+	},
+	{
+		hidden: false,
 		key: 'sourcery',
-		projectType: 'work',
+		projectType: 'both',
 		name: 'Sourcery',
 		subtitle: 'UX Design',
 		link: ['https://sourceryapp.org', 'Visit Sourcery'],
@@ -31,7 +44,7 @@ export const projects: Project[] = [
 	{
 		hidden: false,
 		key: 'charlesvr',
-		projectType: 'work',
+		projectType: 'dev',
 		name: 'CharlesV|R',
 		subtitle: 'Front End Development',
 		link: ['https://greenhousestudios.github.io/charlesvr/chapter/1.html', 'Visit CharlesVR'],
@@ -46,7 +59,7 @@ export const projects: Project[] = [
 	{
 		hidden: false,
 		key: 'doglane',
-		projectType: 'project',
+		projectType: 'design',
 		name: 'Dog Lane Cafe',
 		subtitle: 'Branding',
 		backgroundColor: 'hsl(14, 92%, 65%)',
@@ -59,7 +72,7 @@ export const projects: Project[] = [
 	{
 		hidden: false,
 		key: 'leisurely',
-		projectType: 'project',
+		projectType: 'design',
 		name: 'Leisurely',
 		subtitle: 'UI Design',
 		backgroundColor: '#FFF',
@@ -72,7 +85,7 @@ export const projects: Project[] = [
 	{
 		hidden: false,
 		key: 'tondo',
-		projectType: 'project',
+		projectType: 'design',
 		name: 'Tondo',
 		subtitle: 'Icongraphy',
 		backgroundColor: 'hsl(46, 100%, 50%)',

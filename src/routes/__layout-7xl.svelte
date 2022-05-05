@@ -22,7 +22,7 @@
 </script>
 
 <svelte:window bind:scrollY={y} />
-<div class="text-cobalt-600 dark:text-cobalt-50">
+<div class="text-cobalt-500 dark:text-cobalt-50">
 	<nav
 		class="sticky top-0 z-50 h-32 w-full border-b-cobalt-900/5 dark:border-b-white/5
 		{shrunk ? 'border-b-[1px]' : ''} 
@@ -50,21 +50,21 @@
 			<div class="hidden space-x-6 sm:flex">
 				<a
 					href="/"
-					class="flex items-center gap-2 rounded-lg p-4 pb-[14px] text-xl font-bold lowercase tracking-widest transition-colors hover:bg-cobalt-600/10 hover:dark:bg-white/10"
+					class="hover:bg-cobalt-500/10 flex items-center gap-2 rounded-lg p-4 pb-[14px] text-xl font-bold lowercase tracking-widest transition-colors hover:dark:bg-white/10"
 				>
 					<span class="material-symbols-rounded"> home </span>
 					Home
 				</a>
 				<a
 					href="/about"
-					class="flex items-center gap-2 rounded-lg p-4 pb-[14px] text-xl font-bold lowercase tracking-widest transition-colors hover:bg-cobalt-600/10 hover:dark:bg-white/10"
+					class="hover:bg-cobalt-500/10 flex items-center gap-2 rounded-lg p-4 pb-[14px] text-xl font-bold lowercase tracking-widest transition-colors hover:dark:bg-white/10"
 				>
 					<span class="material-symbols-rounded"> face </span>
 					About
 				</a>
 				<a
 					href="mailto:contact@almr.design"
-					class="flex items-center gap-2 rounded-2xl bg-cobalt-600 p-4 text-xl font-bold lowercase tracking-widest  text-white transition-all hover:scale-105  active:translate-x-4 dark:bg-cobalt-50 dark:text-cobalt-600"
+					class="bg-cobalt-500 dark:text-cobalt-500 flex items-center gap-2 rounded-2xl p-4 text-xl font-bold lowercase  tracking-widest text-white transition-all  hover:scale-105 active:translate-x-4 dark:bg-cobalt-50"
 				>
 					<div class="material-symbols-rounded">mail</div>
 					<span>hire me!</span>

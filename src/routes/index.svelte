@@ -10,30 +10,34 @@
 	import { flip } from 'svelte/animate';
 	import { projects } from '../projects';
 	import Home from '../components/home.svelte';
-	let workList = projects.filter((x) => x.projectType == 'work');
-	let projectList = projects.filter((x) => x.projectType == 'project');
+	let designList = projects.filter((x) => x.projectType == 'design' || x.projectType == 'both');
+	let devList = projects.filter((x) => x.projectType == 'dev' || x.projectType == 'both');
 </script>
 
 <svelte:head>
 	<title>muellr</title>
 </svelte:head>
-<Home />
-<Card
-	class="my-12 flex w-max items-center gap-3 p-5 text-3xl font-extrabold uppercase tracking-[.35rem]"
->
-	<span class="material-symbols-rounded text-3xl"> work </span> Work
-</Card>
-{#each workList as project}
+<div class="mx-auto max-w-screen-2xl px-6 md:pt-32">
+	<Home />
+	<Card
+		class="my-12 flex w-max items-center gap-3 p-5 text-3xl font-extrabold uppercase tracking-[.35rem]"
+	>
+		<span class="material-symbols-rounded text-3xl"> code </span> Dev
+	</Card>
+</div>
+{#each devList as project}
 	<ProjectCard {project} />
 {/each}
 
 <!-- <div class="my-12 h-1 w-full rounded-full bg-stone-300 opacity-100 dark:bg-cobalt-900/80" /> -->
-<Card
-	class="my-12 flex w-max items-center gap-3 p-5 text-3xl font-extrabold uppercase tracking-[.35rem]"
->
-	<span class="material-symbols-rounded text-3xl"> draw </span> Projects
-</Card>
+<div class="mx-auto max-w-screen-2xl px-6">
+	<Card
+		class="my-12 flex w-max items-center gap-3 p-5 text-3xl font-extrabold uppercase tracking-[.35rem]"
+	>
+		<span class="material-symbols-rounded text-3xl"> draw </span> Design
+	</Card>
+</div>
 
-{#each projectList as project}
+{#each designList as project}
 	<ProjectCard {project} />
 {/each}

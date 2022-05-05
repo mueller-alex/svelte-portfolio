@@ -1,13 +1,12 @@
 <script>
 	import Button from '../components/button.svelte';
 	import SocialLinks from '../components/social-links.svelte';
-	export let noSocials = false;
 	import Icon from '@iconify/svelte';
 	import { fly, fade } from 'svelte/transition';
-	let words = ['design', 'code', 'build', 'ship'];
+	let words = ['design', 'build', 'launch'];
 	let word = 'design';
 	let index = 0;
-	let icons = ['draw', 'code', 'build', 'rocket_launch'];
+	let icons = ['draw', 'construction', 'rocket_launch'];
 	let icon = 'draw';
 	setInterval(() => {
 		// increase index by 1 and loop
@@ -34,7 +33,7 @@
 						</span> -->
 						<span
 							class="material-symbols-rounded absolute text-5xl leading-none"
-							transition:fly={{ x: 30, duration: 500 }}
+							transition:fly={{ x: -30, duration: 500 }}
 						>
 							{icon}
 						</span>
@@ -51,7 +50,7 @@
 						>
 							{word}
 						</span> -->
-						<span class="absolute" transition:fly={{ x: 30, duration: 500 }}>
+						<span class="absolute" transition:fly={{ x: -30, duration: 500 }}>
 							{word}
 						</span>
 					{/key}
@@ -67,23 +66,32 @@
 			<!-- <p class="my-6 max-w-[min(100%,45ch)] text-xl font-medium leading-relaxed">
 				I'm a UX engineer. I love taking apps from an idea to a fully fleshed out project.
 			</p> -->
-			{#if !noSocials}
-				<SocialLinks />
-			{/if}
+			<SocialLinks />
 			<!-- <Button text="View Resume" classes="mt-4"/> -->
 		</div>
-		<div
-			class="absolute -right-32 -top-16 -z-10 order-first ml-auto overflow-hidden opacity-60 md:relative md:inset-0 md:order-last md:m-0 md:p-0 md:py-16"
+		<!-- <div
+			class="absolute -right-32 -top-16 -z-10 order-first ml-auto opacity-60 md:relative md:right-0 md:order-last md:py-16"
 		>
 			<img
 				src="/flash.jpg"
 				alt=""
 				id="pfp"
-				class="wobble aspect-square w-full object-cover outline outline-[32px] outline-mueller-100 saturate-[.9] dark:outline-mueller-900 "
+				class="wobble aspect-square w-full object-cover outline outline-[32px] outline-mueller-100 saturate-[.9] dark:outline-mueller-900 md:origin-right md:scale-[1.75]"
 				in:fade={{ intro: true, duration: 1000 }}
 			/>
-		</div>
+		</div> -->
 	</div>
+</div>
+<div
+	class="absolute -right-32 -top-32 -z-10 order-first ml-auto aspect-square h-[50vw] max-h-[600px] min-h-[450px] opacity-60 md:order-last 2xl:right-48"
+>
+	<img
+		src="/flash.jpg"
+		alt=""
+		id="pfp"
+		class="wobble w-full object-cover outline outline-[32px] outline-mueller-100 saturate-[.9] dark:outline-mueller-900 md:origin-right"
+		in:fade={{ intro: true, duration: 1000 }}
+	/>
 </div>
 
 <!-- <img
@@ -95,7 +103,7 @@
 <style lang="sass">
 	#pfp 
 		mask-image: url(/blob.svg)
-		mask-size: 115%
+		mask-size: 121%
 		mask-position: center
 	.wobble
 		// animation: wobble 3s infinite ease-in-out alternate

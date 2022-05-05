@@ -9,9 +9,10 @@
 </script>
 
 <svelte:head>
-	<title>{project.name} | ALMR Design</title>
+	<title>{project.name} | muellr</title>
 </svelte:head>
-<ProjectCard {project} noLink noMargin />
+<div class="h-32" />
+<ProjectCard {project} noLink solid />
 <ProjectInfo {project}>
 	<div class="space-y-4" slot="overview">
 		{#each project.overview as p}
