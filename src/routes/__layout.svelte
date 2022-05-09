@@ -21,13 +21,12 @@
 <svelte:window bind:scrollY={y} />
 <div class=" overflow-clip text-cobalt-500 dark:text-cobalt-50">
 	<nav
-		class="fixed top-0 z-50 h-32 w-full border-b-cobalt-900/5 dark:border-b-white/5 {shrunk
-			? 'border-b-[1px]'
-			: ''} bg-gradient-to-b from-slate-50/80 transition-all dark:from-slate-800/80"
+		class="
+			{shrunk ? 'border-b-[1px]' : ''} 
+			fixed top-0 z-50 h-32 w-full border-b-cobalt-900/5 bg-cobalt-50  bg-opacity-50 transition-all  dark:border-b-white/5 dark:bg-cobalt-800 dark:bg-opacity-0"
 		class:shadow-xl={shrunk}
 		class:h-24={shrunk}
-		class:bg-cobalt-50={shrunk}
-		class:dark:bg-cobalt-800={shrunk}
+		class:!bg-opacity-100={shrunk}
 	>
 		<div
 			class="mx-auto flex h-full max-w-screen-2xl items-center justify-between px-6 transition-all"
@@ -54,15 +53,15 @@
 					<span class="material-symbols-rounded"> home </span>
 					Home
 				</a>
-				<a
+				<!-- <a
 					href="/about"
 					class="flex items-center gap-2 rounded-lg p-4 pb-[14px] text-xl font-bold lowercase tracking-widest transition-colors hover:bg-cobalt-500/10 hover:dark:bg-white/10"
 				>
 					<span class="material-symbols-rounded"> face </span>
 					About
-				</a>
+				</a> -->
 				<a
-					href="mailto:contact@almr.design"
+					href="mailto:alex@muellr.xyz"
 					class="flex items-center gap-2 rounded-2xl bg-cobalt-500 p-4 text-xl font-bold lowercase tracking-widest  text-white transition-all hover:scale-105  active:translate-x-4 dark:bg-cobalt-50 dark:text-cobalt-500"
 				>
 					<div class="material-symbols-rounded">mail</div>
@@ -94,7 +93,7 @@
 {/if}
 {#if menu}
 	<div
-		class="absolute top-0 right-0 flex w-max flex-col rounded-2xl bg-white py-2 shadow dark:bg-cobalt-600"
+		class="fixed inset-4 top-auto z-20 flex flex-col rounded-2xl bg-white py-2 shadow dark:bg-cobalt-600 dark:text-cobalt-50"
 		transition:fade={{ duration: 150 }}
 		id="menu"
 	>
@@ -105,15 +104,15 @@
 			<span class="material-symbols-rounded"> home </span>
 			home
 		</a>
-		<a
+		<!-- <a
 			href="/about"
 			class="flex items-center gap-4 rounded-lg p-6 pb-[14px] text-xl font-bold lowercase tracking-widest transition-colors"
 		>
 			<span class="material-symbols-rounded"> face </span>
 			About
-		</a>
+		</a> -->
 		<a
-			href="mailto:contact@almr.design"
+			href="mailto:alex@muellr.xyz"
 			class="flex items-center gap-4 rounded-lg p-6 pb-[14px] text-xl font-bold lowercase tracking-widest transition-colors"
 		>
 			<span class="material-symbols-rounded"> work </span>

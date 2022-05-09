@@ -16,7 +16,7 @@
 	}, 4000);
 </script>
 
-<div class="flex min-h-[40vh] w-full items-center">
+<div class="flex min-h-[40vh] w-full items-center 2xl:relative">
 	<div
 		class="mx-auto flex w-full flex-col items-stretch justify-center md:grid md:grid-cols-[8fr_3fr] md:items-center md:gap-x-4"
 	>
@@ -81,17 +81,19 @@
 			/>
 		</div> -->
 	</div>
-</div>
-<div
-	class="absolute -right-32 -top-32 -z-10 order-first ml-auto aspect-square h-[50vw] max-h-[600px] min-h-[450px] opacity-60 md:order-last 2xl:right-48"
->
-	<img
-		src="/flash.jpg"
-		alt=""
-		id="pfp"
-		class="wobble w-full object-cover outline outline-[32px] outline-mueller-100 saturate-[.9] dark:outline-mueller-900 md:origin-right"
-		in:fade={{ intro: true, duration: 1000 }}
-	/>
+	<div class="pointer-events-none inset-0 w-full ">
+		<div
+			class="absolute -right-16 top-0 -z-10 order-first ml-auto aspect-square h-[60vw] max-h-[750px] min-h-[400px] opacity-90 transition-all sm:right-0 md:order-last 2xl:-top-32 "
+		>
+			<img
+				src="/uconn.jpg"
+				alt=""
+				id="pfp"
+				class="wobble w-full rounded-bl-[5rem] border-[1px] border-white/[.14] object-cover  mix-blend-multiply saturate-[0.9] transition-all  md:origin-right 2xl:rounded-b-[5rem]"
+				in:fade={{ intro: true, duration: 1000 }}
+			/>
+		</div>
+	</div>
 </div>
 
 <!-- <img
@@ -101,10 +103,10 @@
 	class="absolute -right-96 -top-48 opacity-40 mix-blend-hard-light outline outline-[32px] outline-mueller-100 grayscale dark:outline-mueller-900 "
 /> -->
 <style lang="sass">
-	#pfp 
-		mask-image: url(/blob.svg)
-		mask-size: 121%
-		mask-position: center
+	// #pfp 
+	// 	mask-image: url(/blob.svg)
+	// 	mask-size: 121%
+	// 	mask-position: center
 	.wobble
 		// animation: wobble 3s infinite ease-in-out alternate
 	@keyframes wobble 
