@@ -50,21 +50,21 @@
 			<div class="hidden space-x-6 sm:flex">
 				<a
 					href="/"
-					class="hover:bg-cobalt-500/10 flex items-center gap-2 rounded-lg p-4 pb-[14px] text-xl font-bold lowercase tracking-widest transition-colors hover:dark:bg-white/10"
+					class="flex items-center gap-2 rounded-lg p-4 pb-[14px] text-xl font-bold lowercase tracking-widest transition-colors hover:bg-cobalt-500/10 hover:dark:bg-white/10"
 				>
 					<span class="material-symbols-rounded"> home </span>
 					Home
 				</a>
 				<a
 					href="/about"
-					class="hover:bg-cobalt-500/10 flex items-center gap-2 rounded-lg p-4 pb-[14px] text-xl font-bold lowercase tracking-widest transition-colors hover:dark:bg-white/10"
+					class="flex items-center gap-2 rounded-lg p-4 pb-[14px] text-xl font-bold lowercase tracking-widest transition-colors hover:bg-cobalt-500/10 hover:dark:bg-white/10"
 				>
 					<span class="material-symbols-rounded"> face </span>
 					About
 				</a>
 				<a
-					href="mailto:contact@almr.design"
-					class="bg-cobalt-500 dark:text-cobalt-500 flex items-center gap-2 rounded-2xl p-4 text-xl font-bold lowercase  tracking-widest text-white transition-all  hover:scale-105 active:translate-x-4 dark:bg-cobalt-50"
+					href="mailto:alex@muellr.xyz"
+					class="flex items-center gap-2 rounded-2xl bg-cobalt-500 p-4 text-xl font-bold lowercase tracking-widest  text-white transition-all hover:scale-105  active:translate-x-4 dark:bg-cobalt-50 dark:text-cobalt-500"
 				>
 					<div class="material-symbols-rounded">mail</div>
 					<span>hire me!</span>
@@ -96,7 +96,7 @@
 							About
 						</a>
 						<a
-							href="mailto:contact@almr.design"
+							href="mailto:alex@muellr.xyz"
 							class="flex items-center gap-4 rounded-lg p-6 pb-[14px] text-xl font-bold lowercase tracking-widest transition-colors"
 						>
 							<span class="material-symbols-rounded"> work </span>

@@ -24,20 +24,15 @@
 	>
 		<span class="material-symbols-rounded text-3xl"> code </span> Dev
 	</Card>
-</div>
-{#each devList as project}
-	<ProjectCard {project} />
-{/each}
-
-<!-- <div class="my-12 h-1 w-full rounded-full bg-stone-300 opacity-100 dark:bg-cobalt-900/80" /> -->
-<div class="mx-auto max-w-screen-2xl px-6">
+	{#each devList as project}
+		<ProjectCard {project} />
+	{/each}
 	<Card
 		class="my-12 flex w-max items-center gap-3 p-5 text-3xl font-extrabold uppercase tracking-[.35rem]"
 	>
 		<span class="material-symbols-rounded text-3xl"> draw </span> Design
 	</Card>
+	{#each designList as project}
+		<ProjectCard {project} />
+	{/each}
 </div>
-
-{#each designList as project}
-	<ProjectCard {project} />
-{/each}
