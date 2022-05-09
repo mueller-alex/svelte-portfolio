@@ -6,7 +6,7 @@
 	import Profile from '../components/profile.svelte';
 
 	import Icon from '@iconify/svelte';
-	import { fade } from 'svelte/transition';
+	import { fade, fly } from 'svelte/transition';
 	import { flip } from 'svelte/animate';
 	import { projects } from '../projects';
 	import Home from '../components/home.svelte';
