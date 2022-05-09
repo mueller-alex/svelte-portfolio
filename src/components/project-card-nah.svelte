@@ -1,4 +1,5 @@
 <script lang="ts">
+	import { fly } from 'svelte/transition';
 	export let noLink = false;
 	export let solid = false;
 	export let classes;

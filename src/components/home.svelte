@@ -90,7 +90,7 @@
 				alt=""
 				id="pfp"
 				class="wobble w-full rounded-bl-[5rem] border-[1px] border-white/[.14] object-cover  mix-blend-multiply saturate-[0.9] transition-all  md:origin-right 2xl:rounded-b-[5rem]"
-				in:fade={{ intro: true, duration: 1000 }}
+				in:fly={{ intro: true, x: 10 }}
 			/>
 		</div>
 	</div>

@@ -4,7 +4,7 @@
 	import Footer from './../components/footer.svelte';
 	import { base, assets } from '$app/paths';
 	import '../app.css';
-	import { fade } from 'svelte/transition';
+	import { fade, fly } from 'svelte/transition';
 	import { dev } from '$app/env';
 	import Card from './../components/card.svelte';
 	let y = 0;
@@ -83,7 +83,7 @@
 		<slot />
 	</div>
 </div>
-{#if dev && false}
+{#if dev}
 	<Card
 		class="fixed bottom-4 right-4 flex items-center gap-2 rounded-full !bg-yellow-400 text-xl font-bold tracking-wider !text-black"
 	>
