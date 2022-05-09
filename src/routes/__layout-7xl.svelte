@@ -11,27 +11,28 @@
 	let shrunk = false;
 	let menu = false;
 	function toggle() {
+		console.log(menu);
+		console.log('->');
 		menu = !menu;
+		console.log(menu);
 	}
 	$: {
-		shrunk = y > 128;
+		shrunk = y > 128 ? true : false;
 	}
 </script>
 
 <svelte:window bind:scrollY={y} />
-<div class=" overflow-clip text-cobalt-500 dark:text-cobalt-50">
+<div class="text-cobalt-500 dark:text-cobalt-50">
 	<nav
-		class="fixed top-0 z-50 h-32 w-full border-b-cobalt-900/5 dark:border-b-white/5 {shrunk
-			? 'border-b-[1px]'
-			: ''} bg-gradient-to-b from-slate-50/80 transition-all dark:from-slate-800/80"
+		class="sticky top-0 z-50 h-32 w-full border-b-cobalt-900/5 dark:border-b-white/5
+		{shrunk ? 'border-b-[1px]' : ''} 
+		bg-transparent transition-all"
 		class:shadow-xl={shrunk}
 		class:h-24={shrunk}
 		class:bg-cobalt-50={shrunk}
 		class:dark:bg-cobalt-800={shrunk}
 	>
-		<div
-			class="mx-auto flex h-full max-w-screen-2xl items-center justify-between px-6 transition-all"
-		>
+		<div class="mx-auto flex h-full max-w-7xl items-center justify-between px-6 transition-all">
 			<a href="/#" title="Home">
 				<svg
 					class="transition-all"
@@ -46,88 +47,80 @@
 					/>
 				</svg>
 			</a>
-			<div class="hidden space-x-6 md:flex">
+			<div class="hidden space-x-6 sm:flex">
 				<a
 					href="/"
-					class="flex items-center gap-2 rounded-lg p-4 pb-[14px] text-xl font-bold lowercase tracking-widest transition-colors hover:bg-cobalt-500/10 hover:dark:bg-white/10"
+					class="hover:bg-cobalt-500/10 flex items-center gap-2 rounded-lg p-4 pb-[14px] text-xl font-bold lowercase tracking-widest transition-colors hover:dark:bg-white/10"
 				>
 					<span class="material-symbols-rounded"> home </span>
 					Home
 				</a>
 				<a
 					href="/about"
-					class="flex items-center gap-2 rounded-lg p-4 pb-[14px] text-xl font-bold lowercase tracking-widest transition-colors hover:bg-cobalt-500/10 hover:dark:bg-white/10"
+					class="hover:bg-cobalt-500/10 flex items-center gap-2 rounded-lg p-4 pb-[14px] text-xl font-bold lowercase tracking-widest transition-colors hover:dark:bg-white/10"
 				>
 					<span class="material-symbols-rounded"> face </span>
 					About
 				</a>
 				<a
 					href="mailto:contact@almr.design"
-					class="flex items-center gap-2 rounded-2xl bg-cobalt-500 p-4 text-xl font-bold lowercase tracking-widest  text-white transition-all hover:scale-105  active:translate-x-4 dark:bg-cobalt-50 dark:text-cobalt-500"
+					class="bg-cobalt-500 dark:text-cobalt-500 flex items-center gap-2 rounded-2xl p-4 text-xl font-bold lowercase  tracking-widest text-white transition-all  hover:scale-105 active:translate-x-4 dark:bg-cobalt-50"
 				>
 					<div class="material-symbols-rounded">mail</div>
 					<span>hire me!</span>
 				</a>
 			</div>
 			<button
-				class="relative z-20 grid aspect-square h-12 w-12 place-items-center md:hidden"
-				on:click={() => {
-					toggle();
-					shrunk = true;
-				}}
+				class="relative z-20 grid aspect-square h-12 w-12 place-items-center sm:hidden"
+				on:click={toggle}
 			>
 				<div class="material-symbols-rounded w-8 text-3xl leading-none">menu</div>
+				{#if menu}
+					<div
+						class="absolute top-0 right-0 flex w-max flex-col rounded-2xl bg-white py-2 shadow dark:bg-cobalt-700"
+						transition:fade={{ duration: 150 }}
+						id="menu"
+					>
+						<a
+							href="/"
+							class="flex items-center gap-4 rounded-lg p-6 pb-[14px] text-xl font-bold lowercase tracking-widest transition-colors"
+						>
+							<span class="material-symbols-rounded"> home </span>
+							home
+						</a>
+						<a
+							href="/about"
+							class="flex items-center gap-4 rounded-lg p-6 pb-[14px] text-xl font-bold lowercase tracking-widest transition-colors"
+						>
+							<span class="material-symbols-rounded"> face </span>
+							About
+						</a>
+						<a
+							href="mailto:contact@almr.design"
+							class="flex items-center gap-4 rounded-lg p-6 pb-[14px] text-xl font-bold lowercase tracking-widest transition-colors"
+						>
+							<span class="material-symbols-rounded"> work </span>
+							hire me!
+						</a>
+					</div>
+				{/if}
 			</button>
 		</div>
 	</nav>
-	<div id="app-container" class="mx-auto w-full">
+	<div id="app-container" class="mx-auto w-screen max-w-7xl px-6">
 		<slot />
 	</div>
 </div>
-{#if dev && false}
-	<Card
-		class="fixed bottom-4 right-4 flex items-center gap-2 rounded-full !bg-yellow-400 text-xl font-bold tracking-wider !text-black"
-	>
+{#if dev}
+	<Card class="fixed bottom-4 right-4 flex items-center gap-2">
 		<span class="material-symbols-rounded"> construction </span>
-		DEV
+		dev
 	</Card>
 {/if}
 {#if menu}
 	<div
-		class="absolute top-0 right-0 flex w-max flex-col rounded-2xl bg-white py-2 shadow dark:bg-cobalt-600"
-		transition:fade={{ duration: 150 }}
-		id="menu"
-	>
-		<a
-			href="/"
-			class="flex items-center gap-4 rounded-lg p-6 pb-[14px] text-xl font-bold lowercase tracking-widest transition-colors"
-		>
-			<span class="material-symbols-rounded"> home </span>
-			home
-		</a>
-		<a
-			href="/about"
-			class="flex items-center gap-4 rounded-lg p-6 pb-[14px] text-xl font-bold lowercase tracking-widest transition-colors"
-		>
-			<span class="material-symbols-rounded"> face </span>
-			About
-		</a>
-		<a
-			href="mailto:contact@almr.design"
-			class="flex items-center gap-4 rounded-lg p-6 pb-[14px] text-xl font-bold lowercase tracking-widest transition-colors"
-		>
-			<span class="material-symbols-rounded"> work </span>
-			hire me!
-		</a>
-	</div>
-{/if}
-{#if menu}
-	<div
 		class="fixed inset-0 z-10 bg-white/50 dark:bg-black/50"
-		on:click={() => {
-			toggle();
-			shrunk = y > 128;
-		}}
+		on:click={toggle}
 		transition:fade={{ duration: 150 }}
 	/>
 {/if}
@@ -147,9 +140,6 @@
 		height: 100%
 		scroll-padding-top: 96px
 		scroll-behavior: smooth
-		scrollbar-width: thin
-		scrollbar-gutter: stable
-		scrollbar-color: transparent
 		background-attachment: fixed
 		// background-size: auto
 		// background-size: 8px 8px

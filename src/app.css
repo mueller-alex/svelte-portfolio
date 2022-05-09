@@ -1,0 +1,10 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+	body {
+		font-feature-settings: 'ss02', 'ss01', 'cv06', 'cv11', 'cpsp', 'case' !important;
+		letter-spacing: 0.025rem !important;
+	}
+}
