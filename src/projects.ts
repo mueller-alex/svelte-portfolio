@@ -10,7 +10,7 @@ export interface Project {
 	role: string;
 	skills: string;
 	timeline: string;
-	overview: string[];
+	overview?: string[];
 }
 export const projects: Project[] = [
 	{
@@ -23,8 +23,7 @@ export const projects: Project[] = [
 		backgroundColor: 'hsl(225, 30%, 15%)',
 		role: 'Front End Engineer',
 		timeline: 'Feb 2020 - May 2022',
-		skills: 'Svelte, TailwindCSS',
-		overview: ['muellr.xyz']
+		skills: 'Svelte, TailwindCSS'
 	},
 	{
 		hidden: false,
@@ -66,8 +65,7 @@ export const projects: Project[] = [
 		textColor: 'hsl(14, 100%, 16%)',
 		role: 'Branding Designer',
 		timeline: 'Feb 2020',
-		skills: 'Adobe Illustrator, Figma',
-		overview: ['Dog Lane Cafe']
+		skills: 'Adobe Illustrator, Figma'
 	},
 	{
 		hidden: false,
@@ -79,8 +77,7 @@ export const projects: Project[] = [
 		textColor: '#000',
 		role: 'UI Designer',
 		timeline: 'Feb 2020',
-		skills: 'Figma',
-		overview: ['Leisurely']
+		skills: 'Figma'
 	},
 	{
 		hidden: false,
@@ -92,7 +89,6 @@ export const projects: Project[] = [
 		textColor: 'hsl(15, 100%, 25%)',
 		role: 'Icongraphy',
 		timeline: 'November 2015',
-		skills: 'Adobe Illustrator, Figma',
-		overview: ['Tondo']
+		skills: 'Adobe Illustrator, Figma'
 	}
 ];
