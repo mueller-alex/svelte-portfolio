@@ -61,6 +61,7 @@ export const projects: Project[] = [
 		projectType: 'design',
 		name: 'Dog Lane Cafe',
 		subtitle: 'Branding',
+		link: ['https://www.behance.net/gallery/96296037/Dog-Lane-UX-Exploration', 'Visit Dog Lane'],
 		backgroundColor: 'hsl(14, 92%, 65%)',
 		textColor: 'hsl(14, 100%, 16%)',
 		role: 'Branding Designer',
