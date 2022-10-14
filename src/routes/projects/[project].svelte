@@ -15,10 +15,6 @@
 <div class="mx-auto w-full max-w-screen-2xl">
 	<ProjectCard {project} noLink />
 	<ProjectInfo {project}>
-		<div class="space-y-4" slot="overview">
-			{#each project.overview as p}
-				<p class="max-w-prose leading-relaxed">{p}</p>
-			{/each}
-		</div>
+		
 	</ProjectInfo>
 </div>

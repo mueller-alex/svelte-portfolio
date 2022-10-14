@@ -49,8 +49,16 @@
 			</Card>
 		{/if}
 	</div>
-	<div class="col-span-7">
-		<slot name="overview" />
+	<div class="col-span-7 space-y-4">
+		<slot name="overview" >
+			{#if project.overview}
+				{#each project.overview as p}
+					<p class="max-w-prose leading-relaxed">{p}</p>
+				{/each}
+				{:else}
+				Portfolio is currently under construction, please <a href="malito:contact@muellr.xyz">contact me</a> for more information!
+			{/if}
+		</slot>
 	</div>
 </div>
 {#if project.link && false}
