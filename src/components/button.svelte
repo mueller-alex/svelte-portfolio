@@ -27,15 +27,11 @@
 
 <a
 	{href}
-	class="p-{padding} flex rounded-[.75rem] border-[1px] border-white/10 bg-mueller-50 transition-transform hover:scale-105 dark:bg-mueller-800 {classes}"
+	class="p-{padding} flex rounded-[.75rem] border border-white/10 bg-mueller-50 transition-transform hover:scale-105 dark:bg-mueller-800 {classes}"
 	style:background
 	style:color
 >
-	<span class="material-symbols-rounded text-[{textSize}px]">
-		{leftIcon}
-	</span>
+	<iconify-icon icon={leftIcon} height={textSize} />
 	<div class="font-bold uppercase tracking-[.15rem] {margin} text-[{textSize}px]">{text}</div>
-	<span class="material-symbols-rounded text-[{textSize}px]">
-		{rightIcon}
-	</span>
+	<iconify-icon icon={rightIcon} height={textSize} />
 </a>

@@ -14,7 +14,7 @@
 				class="text-center text-5xl font-extrabold lowercase leading-snug tracking-widest md:text-left"
 			>
 				<!-- <div id="waving" class="inline-block">
-					<Icon icon="twemoji:call-me-hand" hFlip={true} />
+					<iconify-icon icon="twemoji:call-me-hand" hFlip={true} />
 				</div> -->
 				<div id="waving" class="inline-block">👋</div>
 				<br class="md:hidden" /> Hi, I'm Alex!
@@ -34,7 +34,7 @@
 				src="../pfpsmall.jpg"
 				alt=""
 				id="pfp"
-				class="outline outline-[32px] outline-mueller-100 dark:outline-mueller-900"
+				class="border-[32px] border-mueller-100 dark:border-mueller-900"
 			/>
 		</div>
 	</div>

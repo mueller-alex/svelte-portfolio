@@ -19,12 +19,12 @@
 
 {#if color}
 	<div
-		class="flex items-center p-3 w-max rounded-full border-2 border-white/[.07]"
+		class="flex w-max items-center rounded-full border-2 border-white/[.07] p-3"
 		style={`background-color: ${bgColor}`}
 	>
-		<Icon {icon} width="24" height="24" {color} />
+		<iconify-icon {icon} width="24" height="24" {color} />
 		{#if text}
-			<div class="text-base ml-2 mr-1" style={'color: ' + color}>
+			<div class="ml-2 mr-1 text-base" style={'color: ' + color}>
 				{text}
 			</div>
 		{/if}
@@ -35,7 +35,7 @@
 		class="p-3 w-max rounded-full bg-opacity-5 bg-mueller-900 dark:bg-mueller-50 dark:bg-opacity-10 border-2 border-white/[.07]"
 	>
 		<div class="text-mueller-900 dark:text-mueller-50 flex items-center">
-			<Icon {icon} width="24" height="24" color="currentColor" />
+			<iconify-icon {icon} width="24" height="24" color="currentColor" />
 			{#if text}
 				<div class="text-base ml-2 mr-1">
 					{text}

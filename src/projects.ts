@@ -14,13 +14,13 @@ export interface Project {
 }
 export const projects: Project[] = [
 	{
-		hidden: false,
+		hidden: true,
 		key: 'this',
 		projectType: 'both',
 		name: 'muellr.xyz',
 		subtitle: 'Front End Development',
 		link: ['/', 'Visit muellr.xyz'],
-		backgroundColor: 'hsl(225, 30%, 15%)',
+		backgroundColor: 'hsla(225, 20%, 72%, 10%)',
 		role: 'Front End Engineer',
 		timeline: 'Feb 2020 - May 2022',
 		skills: 'Svelte, TailwindCSS'
@@ -32,10 +32,11 @@ export const projects: Project[] = [
 		name: 'Sourcery',
 		subtitle: 'UX Design',
 		link: ['https://sourceryapp.org', 'Visit Sourcery'],
-		backgroundColor: 'hsl(256, 35%, 47%)',
+		backgroundColor: 'hsl(256, 35%, 47%, 20%)',
+		textColor: 'hsl(261, 67%, 91%)',
 		role: 'UX Engineer',
 		timeline: 'Feb 2020 - May 2022',
-		skills: 'Figma, Nuxt, Vue, Vuetify',
+		skills: 'Figma, Vue, Nuxt',
 		overview: [
 			"Sourcery is a not-for-profit service that gives researchers access to documents that can't be found online by paying other researchers to find them. It aims to streamline the process that researchers go through by providing one simple platform that works at any collecting institution in our service area (currently New York City, Boston, and Storrs)."
 		]
@@ -44,11 +45,11 @@ export const projects: Project[] = [
 		hidden: false,
 		key: 'charlesvr',
 		projectType: 'dev',
-		name: 'CharlesV|R',
+		name: 'CharlesVR',
 		subtitle: 'Front End Development',
 		link: ['https://greenhousestudios.github.io/charlesvr/chapter/1.html', 'Visit CharlesVR'],
-		backgroundColor: 'hsl(340, 56%, 16%)',
-		role: 'Front End Engineer',
+		backgroundColor: 'hsl(340, 56%, 56%, 15%)',
+		role: 'Lead Developer',
 		timeline: 'Feb 2020 - May 2022',
 		skills: 'Svelte, TailwindCSS',
 		overview: [
@@ -59,11 +60,11 @@ export const projects: Project[] = [
 		hidden: false,
 		key: 'doglane',
 		projectType: 'design',
-		name: 'Dog Lane Cafe',
+		name: 'Dog Lane Café',
 		subtitle: 'Branding',
-		link: ['https://www.behance.net/gallery/96296037/Dog-Lane-UX-Exploration', 'Visit Dog Lane'],
-		backgroundColor: 'hsl(14, 92%, 65%)',
-		textColor: 'hsl(14, 100%, 16%)',
+		link: ['https://www.behance.net/gallery/96296037/Dog-Lane-UX-Exploration', 'View Case Study'],
+		backgroundColor: 'hsl(21, 41%, 33%, 30%)',
+		textColor: 'hsl(14, 92%, 65%)',
 		role: 'Branding Designer',
 		timeline: 'Feb 2020',
 		skills: 'Adobe Illustrator, Figma'
@@ -74,11 +75,15 @@ export const projects: Project[] = [
 		projectType: 'design',
 		name: 'Leisurely',
 		subtitle: 'UI Design',
-		backgroundColor: '#FFF',
-		textColor: '#000',
+		backgroundColor: '#FFFFFF16',
+		textColor: '#fff',
 		role: 'UI Designer',
-		timeline: 'Feb 2020',
-		skills: 'Figma'
+		timeline: 'Mar 2021',
+		skills: 'Figma',
+		link: [
+			'https://www.figma.com/proto/3hZxdIKmSWdHoEKCBFbbNv/Leisurely-Prototype?page-id=0%3A1&node-id=801%3A1580&viewport=482%2C652%2C0.19&scaling=contain&starting-point-node-id=4%3A2239',
+			'View Prototype'
+		]
 	},
 	{
 		hidden: false,
@@ -86,10 +91,35 @@ export const projects: Project[] = [
 		projectType: 'design',
 		name: 'Tondo',
 		subtitle: 'Icongraphy',
-		backgroundColor: 'hsl(46, 100%, 50%)',
-		textColor: 'hsl(15, 100%, 25%)',
+		backgroundColor: 'hsla(218, 49%, 64%, 20%)',
+		textColor: 'hsl(47, 100%, 69%)',
 		role: 'Icongraphy',
 		timeline: 'November 2015',
 		skills: 'Adobe Illustrator, Figma'
+		// link: ['https://www.figma.com/file/Z2jiLu1etSYHdHKEpVrIXi?node-id=0:1', 'See all icons']
+	},
+	{
+		hidden: true,
+		key: 'acme',
+		projectType: 'design',
+		name: 'ACME',
+		subtitle: 'Design System',
+		backgroundColor: 'hsla(0, 100%, 50%, 10%)',
+		textColor: 'hsl(0, 100%, 100%)',
+		role: 'Design System',
+		timeline: 'May - Aug 2018',
+		skills: 'Sketch'
+	},
+	{
+		hidden: true,
+		key: 'follow',
+		projectType: 'design',
+		name: 'Follow',
+		subtitle: 'UI Design',
+		backgroundColor: 'hsla(228, 83%, 60%, 10%)',
+		textColor: 'white',
+		role: 'UI Designer',
+		timeline: 'Feb - May 2019',
+		skills: 'Figma'
 	}
 ];
