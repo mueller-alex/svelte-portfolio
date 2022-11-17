@@ -9,3 +9,4 @@ node_modules
 .netlify
 debug.log
 pnpm-lock.yaml
+.vscode/settings.json

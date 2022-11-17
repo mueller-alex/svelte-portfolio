@@ -12,7 +12,7 @@
 </script>
 
 <hr />
-<ArrowLink href="/work" text="View all projects" target="" />
+<ArrowLink href="/work" text="View all projects" target="" icon="mingcute:grid-fill" />
 <div class="grid grid-cols-1 gap-8 lg:grid-cols-3">
 	{#each shownProjects as project}
 		<ProjectTile {project} />

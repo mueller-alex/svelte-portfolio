@@ -9,26 +9,33 @@
 
 <Card class="flex h-fit w-full flex-col items-stretch lg:w-max">
 	<div class="flex w-full items-center gap-4 p-3">
-		<iconify-icon icon="majesticons:user-box-line" height="32" />
+		<iconify-icon icon="mingcute:idcard-fill" height="32" />
 		<div class="">
 			<p class="font-space text-sm font-medium uppercase tracking-widest opacity-70">Role</p>
 			<p class="text-lg font-medium tracking-wider">{project.role}</p>
 		</div>
 	</div>
 	<div class="flex w-full items-center gap-4 p-3">
-		<iconify-icon icon="majesticons:calendar" height="32" />
+		<iconify-icon icon="mingcute:calendar-fill" height="32" />
 		<div class="">
 			<p class="font-space text-sm font-medium uppercase tracking-widest opacity-70">Timeline</p>
 			<p class="text-lg font-medium tracking-wider">{project.timeline}</p>
 		</div>
 	</div>
 	<div class="flex w-full items-center gap-4 p-3">
-		<iconify-icon icon="majesticons:lightning-bolt-line" height="32" />
+		<iconify-icon icon="mingcute:flash-fill" height="32" />
 		<div class="">
 			<p class="font-space text-sm font-medium uppercase tracking-widest opacity-70">Tools</p>
 			<p class=" text-lg font-medium tracking-wider">{project.skills}</p>
 		</div>
 	</div>
+	<!-- <div class="flex w-full items-center gap-4 p-3">
+		<iconify-icon icon="mingcute:link-2-line" height="32" />
+		<div class="">
+			<p class="font-space text-sm font-medium uppercase tracking-widest opacity-70">Link</p>
+			<a class=" text-lg font-medium tracking-wider" href={project.link[0]}>{project.link[1]}</a>
+		</div>
+	</div> -->
 	{#if project.link}
 		<Card
 			class="mt-2 w-full rounded-2xl transition-all hover:!bg-white hover:!text-black hover:shadow-cobalt-900"
@@ -38,10 +45,10 @@
 			target="_blank"
 		>
 			<p
-				class="flex items-center justify-center gap-2 px-2 font-space text-lg font-bold uppercase tracking-[.15rem] "
+				class="flex items-center justify-center gap-2 px-2 font-space text-xl font-bold uppercase tracking-[.15rem] "
 			>
 				{project.link[1]}
-				<iconify-icon icon="ic:round-open-in-new" height="28" />
+				<iconify-icon icon="mingcute:link-2-fill" flip="horizontal" />
 			</p>
 		</Card>
 	{/if}

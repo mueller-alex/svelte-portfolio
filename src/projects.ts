@@ -90,10 +90,10 @@ export const projects: Project[] = [
 		key: 'tondo',
 		projectType: 'design',
 		name: 'Tondo',
-		subtitle: 'Icongraphy',
+		subtitle: 'Iconography',
 		backgroundColor: 'hsla(218, 49%, 64%, 20%)',
 		textColor: 'hsl(47, 100%, 69%)',
-		role: 'Icongraphy',
+		role: 'Iconography',
 		timeline: 'November 2015',
 		skills: 'Adobe Illustrator, Figma'
 		// link: ['https://www.figma.com/file/Z2jiLu1etSYHdHKEpVrIXi?node-id=0:1', 'See all icons']

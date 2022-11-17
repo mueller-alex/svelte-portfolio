@@ -9,7 +9,20 @@
 	import Card from './../components/card.svelte';
 	import { page } from '$app/stores';
 	import About from './about.svelte';
+	let y = 0;
+	let innerHeight = 0;
+	let bounce = false;
+	$: setTimeout(() => {
+		bounce = y == 0;
+	}, 5000);
+	// set scroll position to innerheight on click
+	function scroll() {
+		y = innerHeight - 96;
+	}
+	$: pageName = $page.url.pathname;
 </script>
+
+<svelte:window bind:scrollY={y} bind:innerHeight />
 
 <div
 	class="mx-auto flex w-full max-w-screen-3xl flex-col items-center p-8 px-6 md:h-40 md:flex-row md:justify-between"
@@ -39,36 +52,47 @@
 	class="pointer-events-none fixed bottom-0 z-50 grid h-32 w-full place-items-center px-2 md:top-0 md:h-40"
 >
 	<nav
-		class="pointer-events-auto mx-auto flex w-full items-baseline justify-between rounded-3xl border-2 border-white/5 bg-black/40 bg-glass bg-[length:150px] p-3 font-space font-medium lowercase tracking-wider shadow-xl shadow-black/60 backdrop-blur-lg backdrop-contrast-[1.1] transition-all sm:gap-4 md:w-max md:max-w-xl md:text-xl xl:w-full"
+		class="pointer-events-auto mx-auto flex w-full items-baseline justify-between rounded-3xl border-2 border-white/10 bg-black bg-opacity-10 bg-glass bg-[length:150px] p-3 font-space font-medium lowercase tracking-wider shadow-none shadow-black/60 backdrop-blur-lg backdrop-contrast-[1.1] transition-all duration-300 sm:gap-4 md:w-max md:max-w-xl md:text-xl xl:w-full"
+		class:bg-opacity-60={y > 0}
+		class:shadow-2xl={y > 0}
 	>
 		<a
 			class="flex w-full flex-col items-center justify-center  rounded-xl bg-white bg-opacity-0 p-3 text-center transition-colors hover:bg-opacity-10 lg:px-6"
-			class:bg-opacity-10={$page.url.pathname === '/'}
+			class:bg-opacity-10={pageName === '/'}
 			href="/"
 		>
-			<iconify-icon icon="majesticons:home-line" />
+			<iconify-icon icon="mingcute:home-4-fill" />
 			Home
 		</a>
 		<a
 			class="flex w-full flex-col items-center justify-center  rounded-xl bg-white bg-opacity-0 p-3 text-center transition-colors hover:bg-opacity-10 lg:px-6"
-			class:bg-opacity-10={$page.url.pathname === '/about'}
+			class:bg-opacity-10={pageName === '/about'}
 			href="/about"
 		>
-			<iconify-icon icon="majesticons:user-box-line" />
+			<iconify-icon icon="mingcute:user-3-fill" />
 			About
 		</a>
 		<a
 			class="flex w-full flex-col items-center justify-center  rounded-xl bg-white bg-opacity-0 p-3 text-center transition-colors hover:bg-opacity-10 lg:px-6"
-			class:bg-opacity-10={$page.url.pathname === '/work' ||
-				$page.url.pathname.includes('/projects')}
+			class:bg-opacity-10={pageName === '/work' || pageName.includes('/projects')}
 			href="/work"
 		>
-			<iconify-icon icon="majesticons:edit-pen-4-line" />
+			<iconify-icon icon="mingcute:grid-fill" />
 			work
 		</a>
 	</nav>
 </div>
 <slot />
+
+<div
+	class="fixed bottom-4 z-50 hidden w-full cursor-pointer justify-center text-center transition-opacity sm:flex"
+	class:opacity-0={y > innerHeight / 12 || !bounce || !pageName.includes('/projects')}
+	on:click={scroll}
+>
+	<Card class="grid animate-bounce-slow place-items-center text-2xl">
+		<iconify-icon icon="pajamas:scroll-down" class=" " />
+	</Card>
+</div>
 
 <Footer />
 

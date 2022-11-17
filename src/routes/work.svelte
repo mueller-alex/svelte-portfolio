@@ -17,6 +17,9 @@
 	let devList = shownProjects.filter((x) => x.projectType == 'dev' || x.projectType == 'both');
 </script>
 
+<svelte:head>
+	<title>Work | muellr.xyz</title>
+</svelte:head>
 <div class="mx-auto w-full max-w-screen-3xl px-6">
 	<div class="mt-8 grid auto-rows-auto grid-cols-1 gap-8 md:grid-cols-3">
 		{#each shownProjects as project}

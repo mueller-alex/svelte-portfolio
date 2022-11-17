@@ -1,5 +1,5 @@
 <script>
-	export let icon = 'fluent:arrow-right-12-filled';
+	export let icon = 'mingcute:arrow-right-fill';
 	export let text;
 	export let href;
 	export let underline = false;

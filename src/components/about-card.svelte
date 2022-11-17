@@ -2,10 +2,11 @@
 	import Card from '../components/card.svelte';
 	export let classes;
 	export { classes as class };
+	export let background = "url('/uconnblur.jpg')";
 </script>
 
 <Card
-	background="url('/uconnblur.jpg')"
+	{background}
 	class="flex h-full w-full flex-col justify-center gap-3 border !bg-cover !bg-center !p-6 font-medium {classes}"
 >
 	<h2 class="font-space text-4xl font-black tracking-wide md:text-6xl">hi, i'm alex!</h2>

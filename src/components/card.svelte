@@ -21,7 +21,7 @@
 	class:bg-glass={!noGlass}
 	class:backdrop-blur-lg={!noBlur}
 	class:backdrop-contrast-\[1.1\]={!noBlur}
-	class="rounded-{corner} backdrop-contrast- border-2 border-white/10  bg-white/5 bg-glass p-3 text-cobalt-50 shadow-lg shadow-cobalt-900/50 {classes}"
+	class="rounded-{corner} border border-white/[.125] bg-white/5 bg-glass p-3 text-cobalt-50 shadow-lg shadow-cobalt-900/50 {classes}"
 >
 	<slot />
 </svelte:element>

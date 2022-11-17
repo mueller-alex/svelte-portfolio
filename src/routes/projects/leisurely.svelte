@@ -91,13 +91,8 @@
 	<Card class="md:p-6">
 		<img src="/projectassets/leisurely/screens.png" alt="Onboarding Flow" class="rounded-xl" />
 	</Card>
-	<ArrowLink
-		text="View prototype"
-		rotate
-		href="https://www.figma.com/proto/3hZxdIKmSWdHoEKCBFbbNv/Leisurely-Prototype?page-id=0%3A1&node-id=801%3A1580&viewport=482%2C652%2C0.19&scaling=contain&starting-point-node-id=4%3A2239&hide-ui=1"
-	/>
 
-	<!-- <Card class="aspect-video">
+	<Card class="aspect-video max-sm:hidden">
 		<iframe
 			loading="lazy"
 			title="Landing Page Figma File"
@@ -105,7 +100,12 @@
 			allowfullscreen
 			class="lazyload h-full w-full rounded-xl"
 		/>
-	</Card> -->
+	</Card>
+	<ArrowLink
+		text="View prototype"
+		rotate
+		href="https://www.figma.com/proto/3hZxdIKmSWdHoEKCBFbbNv/Leisurely-Prototype?page-id=0%3A1&node-id=801%3A1580&viewport=482%2C652%2C0.19&scaling=contain&starting-point-node-id=4%3A2239&hide-ui=1"
+	/>
 	<MoreProjects hide={project.key} />
 </div>
 

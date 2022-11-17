@@ -30,7 +30,7 @@
 		title="GitHub"
 		class="grid w-full place-items-center rounded-2xl p-[10px] text-mueller-100 drop-shadow transition-colors duration-300 hover:bg-black/5 hover:bg-white hover:text-black focus:scale-[1.2] focus:outline-none"
 	>
-		<iconify-icon icon="uim:github-alt" />
+		<iconify-icon icon="mingcute:github-fill" />
 		<!-- <iconify-icon icon={githubIcon} /> -->
 	</a>
 	<a
