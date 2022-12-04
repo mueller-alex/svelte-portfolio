@@ -48,19 +48,22 @@
 		Onboarding Flow
 	</h3>
 	<p class="max-w-prose text-lg leading-relaxed">
-		One of my first features to work on was a new onboarding flow for new users. In Sourcery, there
-		are two types of users: Researchers and Sourcerers. This distinction was required in the backend
-		and was mostly used to determine if a user needed a payment method on file or not. To tackle
-		this issue, I started by making several high-fidelity mockups in Figma. After figuring out
-		generally how I wanted the flow to operate, I then started to focus more on the presentation of
-		certain details, such as informing the user of the difference between the two roles, or if they
-		would need payment information. I eventually landed on the design below with some collaboration
-		with the design lead on the project. I then implemented the design in the app using our
-		JavaScript framework of choice, Vue, alongside our component library, Vuetify.
-		<br />
-		<br />
-		After the start of the COVID-19 pandemic, Sourcery pivoted to a free payment model, and this onboarding
-		flow is no longer active.
+		As a designer on the Sourcery team, one of my first tasks was to create a new onboarding flow
+		for new users. In Sourcery, there are two types of users: Researchers and Sourcerers. This
+		distinction is important because it determines whether or not a user needs to have a payment
+		method on file.
+		<br /><br />
+		To tackle this issue, I started by creating several high-fidelity mockups in Figma. I brainstormed
+		different ways to present the information to the user, and collaborated with the design lead on the
+		project to come up with the final design.
+		<br /><br />
+		Once the design was finalized, I implemented it in the app using Vue and Vuetify. I focused on ensuring
+		that the flow was intuitive and easy to use, and that the user was informed about the differences
+		between the two user roles and the payment requirements.
+		<br /><br />
+		Unfortunately, the onset of the COVID-19 pandemic led Sourcery to pivot to a free payment model,
+		and this onboarding flow is no longer active. However, it was a valuable experience for me as a designer,
+		and helped me to hone my skills in creating user flows and implementing designs in code.
 	</p>
 	<p class="max-w-prose text-lg leading-relaxed" />
 	<Card class="p-6" backgroundColor="#161023">
@@ -87,38 +90,57 @@
 
 	<div class="grid grid-cols-1 gap-8 lg:grid-cols-2">
 		<p class="max-w-prose text-lg leading-relaxed">
-			When I joined the team, the landing page was a simple page with a few links to the login and
-			signup pages. It contained some illustrations and videos but had not been updated since the
-			project initially launched many months prior, where little to no attention was paid to
-			styling.
-			<br />
-			<br />
-			Being a fresh pair of eyes, the team wanted a complete redesign of the landing page. With a list
-			of requirements, I started by making a few mockups in Figma. I took inspiration from other small
-			business landing pages, opting for a modern, professional feel to reflect the brand. With AutoLayout
-			and components in Figma, I was able to quickly iterate on the design and come up with an initial
-			draft I was happy with.
+			When I joined the team, the landing page for the project was outdated and lacked any real
+			styling. It consisted of a few simple links to the login and signup pages, and included some
+			illustrations and videos. However, it had not been updated since the project initially
+			launched, and there had been little to no focus on creating a cohesive visual design.
+			<br /><br />
+			As a fresh pair of eyes, the team asked me to completely redesign the landing page. I was given
+			a list of requirements, and started by creating several mockups in Figma. I took inspiration from
+			other small business landing pages, and aimed for a modern, professional look that would reflect
+			the brand.
+			<br /><br />
+			Using Figma's AutoLayout and component features, I was able to quickly iterate on the design and
+			come up with a draft that I was happy with. The team reviewed the design and provided feedback,
+			and I made some adjustments to create the final landing page. The new design was a major improvement,
+			and helped to establish a consistent visual identity for the project.
 		</p>
 		<Card class="h-fit">
 			<img src="/projectassets/sourcery/landing1.png" alt="" class="rounded-xl" loading="lazy" />
 		</Card>
 		<p class="max-w-prose self-center text-lg leading-relaxed">
-			After initially trying out icons for the highlighted features, I decided that illustrations
-			would help to make the featureset more apparent at a glance, and sourced some illustrations
-			from <a href="https://undraw.co" class="font-space underline">undraw.co</a> alongside some new
-			copy.
-			<br />
-			<br />
-			After a few rounds of feedback, I was able to finalize the design and implement it in the app.
+			When I started working on the design for the app's highlighted features section, I initially
+			tried using icons to represent each feature. However, I quickly realized that illustrations
+			would be more effective at conveying the features at a glance.
+			<br /><br />
+			I sourced some high-quality illustrations from
+			<a href="https://undraw.co" class="font-space underline">undraw.co</a>, and wrote some new
+			copy to go along with them. I worked closely with the team to incorporate their feedback and
+			make sure the design was clear and effective.
+			<br /><br />
+			After several rounds of revisions, I was able to finalize the design and implement it in the app.
+			The result was a visually appealing and informative section that helped users understand the app's
+			capabilities at a glance.
 		</p>
 		<Card class="h-fit">
 			<img src="/projectassets/sourcery/landing2.png" alt="" class="rounded-xl" loading="lazy" />
 		</Card>
 		<p class="max-w-prose text-lg leading-relaxed">
-			After the landing page was finished, I ported the about page that was currently located in the
-			app's interface to a public page so that you could get an idea for what Sourcery was without
-			having to create an account first. The about page consisted of several questions and answers
-			contained in dropdowns.
+			Once the landing page design was complete, I turned my attention to the app's about page. This
+			page contained important information about what Sourcery is and how it works, but it was
+			currently only accessible to users who had already created an account.
+			<br /><br />
+			To make this information more accessible to potential users, I decided to port the about page to
+			a public page on the website. This would allow visitors to learn more about Sourcery without having
+			to create an account first.
+			<br /><br />
+			The about page consisted of several questions and answers contained in dropdown sections. I designed
+			the page to be clean and easy to navigate, and made sure that the information was presented in
+			a clear and concise manner.
+			<br /><br />
+			Overall, the redesigned about page was a success. It provided potential users with the information
+			they needed to make an informed decision about whether or not to create an account, and helped
+			to establish Sourcery as a transparent and trustworthy brand.
 		</p>
 		<Card class="h-fit">
 			<img src="/projectassets/sourcery/about1.png" alt="" class="rounded-xl" loading="lazy" />
@@ -131,9 +153,14 @@
 
 	<h3 class="font-space text-4xl font-extrabold lowercase tracking-wide">Workshop Landing Page</h3>
 	<p class="max-w-prose text-lg leading-relaxed">
-		During 2020, Greenhouse Studios staff and the Northeastern University Library hosted a free
-		virtual workshop series discussing remote access to archives and special collections, and any
-		potential challenges or opportunities during COVID-19 lockdowns.
+		In 2020, Greenhouse Studios staff and the Northeastern University Library teamed up to host a
+		free virtual workshop series that focused on remote access to archives and special collections.
+		The workshops discussed the challenges and opportunities presented by COVID-19 lockdowns, and
+		provided attendees with valuable insights and tips for accessing these resources from home.
+		<br /><br />
+		Overall, the workshops were a valuable addition to the Greenhouse Studios and Northeastern University
+		Library's programming, and helped to provide valuable insights and support to professionals in the
+		field during a difficult time.
 	</p>
 
 	<Card>
@@ -148,11 +175,20 @@
 	<h3 class="font-space text-4xl font-extrabold lowercase tracking-wide">Organization Pages</h3>
 	<p class="max-w-prose text-lg leading-relaxed">
 		As Sourcery expanded to new regions and institutions, our partnered organizations needed to have
-		home pages they could link to that would allow a user to request a document from any of their
-		repositories. The page should include a banner image representing the organization, any relevant
-		information, and a list of repositories. After playing around with some different styles, I
-		landed on one that fit well with the rest of the application and accomplished all the goals we
-		had set out for it.
+		home pages that they could link to. These pages would allow users to request documents from any
+		of the organization's repositories.
+		<br /><br />
+		To create these pages, I started by brainstorming different design styles and approaches. I wanted
+		the pages to include a banner image representing the organization, as well as any relevant information
+		and a list of repositories.
+		<br /><br />
+		After experimenting with several different styles, I landed on a design that fit well with the rest
+		of the Sourcery application and met all of the goals we had set out for it. The design was clean
+		and professional, and provided users with the information they needed to easily request documents
+		from the organization's repositories.
+		<br /><br />
+		Overall, the new home pages were a success, and helped to make it easier for users to access documents
+		from our partnered organizations' repositories.
 	</p>
 	<Card>
 		<img src="/projectassets/sourcery/finalopage.png" alt="" class="rounded-xl" />

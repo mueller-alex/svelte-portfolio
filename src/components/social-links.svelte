@@ -15,7 +15,6 @@
 		class="grid w-full place-items-center rounded-2xl p-[10px] text-mueller-100 transition-colors duration-300 hover:bg-red-50 hover:text-red-900 focus:scale-[1.2] focus:outline-none"
 	>
 		<iconify-icon icon="majesticons:mail" />
-		<!-- <iconify-icon icon={emailIcon} /> -->
 	</a>
 	<a
 		href="https://www.linkedin.com/in/alexmueller392/"
@@ -23,7 +22,6 @@
 		class="grid w-full place-items-center rounded-2xl p-[10px] text-mueller-100 transition-colors duration-300 hover:bg-cyan-50 hover:text-[#0077b5] focus:scale-[1.2] focus:outline-none"
 	>
 		<iconify-icon icon="eva:linkedin-fill" />
-		<!-- <iconify-icon icon={linkedinIcon} /> -->
 	</a>
 	<a
 		href="https://github.com/mueller-alex"
@@ -31,14 +29,12 @@
 		class="grid w-full place-items-center rounded-2xl p-[10px] text-mueller-100 drop-shadow transition-colors duration-300 hover:bg-black/5 hover:bg-white hover:text-black focus:scale-[1.2] focus:outline-none"
 	>
 		<iconify-icon icon="mingcute:github-fill" />
-		<!-- <iconify-icon icon={githubIcon} /> -->
 	</a>
 	<a
 		href="https://www.behance.net/muelleralex"
 		class="grid w-full place-items-center rounded-2xl p-[10px] text-mueller-100 transition-colors duration-300 hover:bg-blue-50 hover:text-[#1769ff] focus:scale-[1.2] focus:outline-none"
 	>
 		<iconify-icon icon="ph:behance-logo-bold" />
-		<!-- <iconify-icon icon={behanceIcon} /> -->
 	</a>
 	<a
 		href="https://twitter.com/almrdesign"
@@ -46,8 +42,14 @@
 		class="relative grid w-full place-items-center rounded-2xl p-[10px]  text-mueller-100 transition-colors duration-300 hover:bg-sky-50 hover:text-[#1da1f2] focus:scale-[1.2] focus:outline-none"
 	>
 		<iconify-icon icon="eva:twitter-fill" />
-		<!-- <iconify-icon icon={twitterIcon} /> -->
 	</a>
+	<!-- <a
+		href="https://mas.to/@mueller"
+		title="Mastodon"
+		class="relative grid w-full place-items-center rounded-2xl p-[10px]  text-mueller-100 transition-colors duration-300 hover:bg-purple-100 hover:text-[#563ACC] focus:scale-[1.2] focus:outline-none"
+	>
+		<iconify-icon icon="mdi:mastodon" />
+	</a> -->
 </Card>
 <!-- 
 <div

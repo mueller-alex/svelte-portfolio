@@ -36,20 +36,26 @@
 	<h3 class="font-space text-4xl font-extrabold lowercase tracking-widest">Branding</h3>
 	<div class="grid gap-8 lg:grid-cols-2">
 		<p class="max-w-prose text-lg leading-relaxed">
-			Seeing as they're located in a college town, I thought it was important that Dog Lane feel up
-			to date with the scenery around them. For this reason, I went with a very clean sans-serif
-			font for the logo and tagline. I dropped the Cafe from their branding as it felt unnecessary;
-			additionally, they identify themselves more as a restaurant than a cafe, seeing the kinds of
-			food they serve. To me, the original branding felt like they were a Starbucks competitor,
-			pretty much only selling coffee and a small dish here and there, but in reality, they do serve
-			a lot of actual entrees to the point where you could go there and have a full meal. For this
-			reason, I thought it was important to make the logo feel more like the restaurants around the
-			area to communicate that Dog Lane is also a restaurant. I thought the 'Come. Sit. Stay.'
-			branding from their website was being underutilized as it directly invites you in, but isn't
-			in their logo at all. I think this slogan is good to have in the large logo but could be
-			omitted for a solid bottom at smaller sizes. For the entire rebranding, keeping everything
-			look modern was my main goal, which is why for the color palette I went with very bright and
-			saturated colors, while still keeping the 'foody' and 'natural' vibes with orange and green.
+			As a user experience designer, I wanted to ensure that the branding for Dog Lane felt
+			up-to-date and in line with its college town surroundings. When I first looked at their
+			branding, I felt that it was lacking in a number of areas. The font they were using for their
+			logo and tagline was not particularly modern or engaging, and the inclusion of the word "Cafe"
+			in their branding felt unnecessary and outdated.
+			<br /><br />
+			After conducting some research, I realized that they were much more than just a cafe. They offer
+			a variety of entrees and can be considered a full-service restaurant. This led me to update their
+			branding to better reflect this. I decided to use a clean sans-serif font for the logo and tagline,
+			and dropped the "Cafe" from their branding altogether.
+			<br /><br />
+			In order to make the logo feel more in line with the other restaurants in the area, I gave it a
+			more modern, sleek design. I also incorporated their "Come. Sit. Stay." branding from their website
+			into the logo, as it directly invites customers in and adds a friendly, welcoming touch. For the
+			color palette, I chose bright, saturated colors that still maintained the "foody" and "natural"
+			vibes with orange and green.
+			<br /><br />
+			Overall, my goal was to create a modern, cohesive brand for Dog Lane that accurately reflected
+			their offerings as a full-service restaurant. I believe that the updated branding will help them
+			stand out in their college town and attract a wider range of customers.
 		</p>
 		<Card class="h-fit">
 			<img src="/projectassets/doglane/4square.png" alt="" class="w-full rounded-xl" />
@@ -68,18 +74,30 @@
 	/>
 	<h3 class="font-space text-4xl font-extrabold lowercase tracking-widest">App Design</h3>
 	<p class="max-w-prose text-lg leading-relaxed">
-		For the app design, I leaned heavily on Google's Material Design guidelines, along with a touch
-		of personal branding. This means I get the neat layouts described by the guidelines, alongside
-		the branding that makes the app feel personal enough to make someone want to use it. Using these
-		existing components with defined spacing helps increase productivity versus having to create
-		these components by hand.
-		<br />
-		<br />
-		Navigation can make or break an application. For my app, I've gone with a simple, three destination
-		navigation bar with tabs leading to Home: a place for hours and the location of the restaurant alongside
-		any news updates; Order: a place to view the menu and order food; and Rewards: a place to track the
-		rewards you've gained by ordering at Dog Lane in the past (Paw Points). These three destinations
-		all have very clear purposes that make navigation clean and easy to use.
+		For the app design, I leaned heavily on Google's Material Design guidelines and incorporated
+		elements of personal branding to create a cohesive, user-friendly experience. Using these
+		existing components with defined spacing helped increase my productivity and allowed me to focus
+		on other aspects of the design.
+		<br /><br />
+		Navigation is an essential component of any successful app, and I took care to create a simple, intuitive
+		navigation bar for my design. The navigation bar features three destinations: Home, Order, and Rewards.
+		The Home tab provides users with important information about the location and hours of the restaurant,
+		as well as any news updates. This is a crucial component of the app, as it allows users to easily
+		find and visit the restaurant in person.
+		<br /><br />
+		The Order tab is where users can view the menu and place orders. This is an important feature of
+		the app, as it allows users to conveniently order food from the restaurant without having to visit
+		in person. The menu is organized in a clear, easy-to-navigate manner, making it simple for users
+		to find and order their favorite dishes.
+		<br /><br />
+		Finally, the Rewards tab is where users can track the rewards they've earned through their past orders
+		at Dog Lane (Paw Points). This is a great way to incentivize repeat business and reward loyal customers.
+		The rewards system is easy to use and allows users to quickly see how many rewards they've earned
+		and what they can redeem them for.
+		<br /><br />
+		Overall, the navigation system I designed for the Dog Lane app is clean, intuitive, and easy to use.
+		It provides users with quick access to all of the information and features they need, making their
+		experience with the app enjoyable and convenient.
 	</p>
 	<Card class="h-fit">
 		<img src="/projectassets/doglane/3screens.png" alt="" class="w-full rounded-xl" />

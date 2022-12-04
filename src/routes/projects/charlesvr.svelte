@@ -19,6 +19,9 @@
 		.slice(0, 3);
 </script>
 
+<svelte:head>
+	<title>{project.name} | muellr</title>
+</svelte:head>
 <div class="mx-auto flex w-full max-w-screen-2xl flex-col space-y-8 px-6">
 	<h1 class="w-full font-space text-5xl font-bold">{project.name}</h1>
 	<p class="!mt-2 w-full text-2xl text-cobalt-100 opacity-70">Greenhouse Studios</p>
@@ -33,25 +36,31 @@
 			of those disciplines a multi-modal window into an event of world-historical importance.
 			<br />
 			<br />
-			I worked on CharlesVR as the sole developer for the showcase website. Initially, I was focused
-			on fixing bugs and improving the user experience. However, after working with an old codebase for
-			long enough, I took it upon myself to remake the entire website from scratch. I wanted to make
-			the website more accessible and easier to use.
+			As the sole developer of the Charles VR showcase website, I was responsible for improving its overall
+			functionality and user experience. Initially, my focus was on resolving existing bugs and enhancing
+			the user experience. However, after working with the old codebase for some time, I decided to rebuild
+			the website from scratch.
+			<br /><br />
+			This allowed me to create a more accessible and user-friendly platform, which was my primary goal.
+			In addition to improving the website's functionality, I was also able to modernize the codebase,
+			making it easier to maintain and update in the future. Overall, my efforts helped to enhance the
+			user experience and position the website as a valuable resource for enthusiasts and scholars alike.
 		</p>
 	</div>
 	<hr />
 	<h3 class="font-space text-4xl font-bold lowercase leading-relaxed tracking-wide">Development</h3>
 	<div class="grid gap-8 lg:grid-cols-2">
 		<p class="max-w-prose text-lg leading-relaxed">
-			When I joined the project, the website was built using vanilla HTML, CSS, and JavaScript.
-			Being a relatively new project, the website was built quickly rather than being built with
-			maintainability in mind. The website was also built with a desktop-first approach, which made
-			it difficult for mobile users to navigate the website. Much of my work was spent fixing old
-			bugs and adapting the site to be more responsive and easier to maintain. One of the changes I
-			implemented was using Pug for templating. This allowed me to reuse code and improved the
-			developer experience greatly. I also started converting the CSS to SASS to provide greater
-			consistency for styling across pages, as the current CSS approach was effectively inline
-			styling for each element.
+			As a member of the team, I was tasked with improving the website's overall functionality and
+			user experience. When I joined the project, the website was built using basic HTML, CSS, and
+			JavaScript, and it was clear that speed of development had been prioritized over
+			maintainability and mobile accessibility.
+			<br /><br />
+			I worked on resolving existing bugs and enhancing the website's responsiveness, making it easier
+			for users to navigate on mobile devices. To improve the developer experience and facilitate code
+			reuse, I introduced Pug for templating and converted the CSS to SASS. This not only helped to ensure
+			consistent styling across the site, but also made it easier to maintain and update in the future.
+			Overall, my contributions helped to modernize the website and make it more user-friendly.
 		</p>
 		<Card class="h-fit">
 			<img src="/projectassets/charlesvr/oldsite.png" alt="" class="rounded-xl" />
@@ -67,23 +76,23 @@
 	</h3>
 	<div class="grid gap-8 lg:grid-cols-2">
 		<p class="max-w-prose text-lg leading-relaxed">
-			After fixing bugs and diagnosing CSS issues for a while, I took it upon myself to rebuild the
-			site from scratch with a few goals in mind: consistent and responsive styling across all
-			pages, and a greatly increased developer experience, allowing for much easier changes in the
-			future. With these goals in mind, I chose to use Svelte and TailwindCSS. Svelte is a
-			JavaScript framework with a far more 'vanilla' feel than something like React or Vue. In
-			addition to just enjoying using Svelte personally, I knew that this 'vanilla' feel would make
-			it easier for future student developers to work on the site in the future. Using Svelte
-			allowed for far more consistency as well, as I could reuse components across pages, rather
-			than having to reimplement the same code over and over again like I had to do with the old
-			site. TailwindCSS was chosen for its ease of use and its ability to provide a consistent look
-			across the site. I also used SvelteKit, which is a framework built on top of Svelte that
-			allows for server-side rendering and other features that make it easier to deploy the site.
-			<br />
-			<br />
-			As of November 2022, the new site is still in development and is yet to be deployed publicly.
+			In an effort to improve the website's functionality and user experience, I decided to rebuild
+			the site from the ground up using Svelte and TailwindCSS. My primary goals were to create a
+			more consistent and responsive design, and to enhance the developer experience to make future
+			updates and changes easier to implement.
+			<br /><br />
+			Svelte was a natural choice for me because of its "vanilla" feel and ease of use, which I believed
+			would make it more accessible to future student developers. Its component-based structure also
+			allowed me to reuse code across pages, providing greater consistency and making the development
+			process more efficient. TailwindCSS was selected for its ability to create a cohesive design and
+			its simplicity, which made it easy to work with. I also utilized SvelteKit, which enabled server-side
+			rendering and other features that facilitated deployment.
+			<br /><br />
+			As of November 2022, the new site is still under development and has not yet been launched. However,
+			I am confident that the improvements I have made will result in a significantly improved user experience
+			and make the website easier to maintain in the future.
 		</p>
-		<Card>
+		<Card class="h-fit">
 			<img src="/projectassets/charlesvr/newsite.png" alt="" class="rounded-xl" />
 		</Card>
 	</div>

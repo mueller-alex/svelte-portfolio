@@ -19,35 +19,55 @@
 	</h1>
 	<!-- <AboutCard class="max-w-prose" background="" /> -->
 	<p class="max-w-prose text-lg leading-loose">
-		My name's Alex Mueller and I've been doing both design and development since 2014 and started
-		professionally in 2017. I started by tinkering with websites' CSS to see what I could do, and
-		I've been hooked ever since. From there, I learned HTML in conjunction with CSS and started
-		creating small web pages of my own. The speed at which you can go from nothing to a page someone
-		anywhere in the world can experience is just one of the reasons I love the web so much. I
-		especially love when the work I do can help make people's lives easier. Creating tools and
-		products that work for the user rather than the other way around is one of my key philosophies.
-		What good is a tool if it gets in your way, rather than accomplishing its key goal of helping
-		you?
+		Hi there! My name is Alex Mueller and I have been working in the field of design and development
+		since 2014, when I first started professionally in 2017. I have always been fascinated by the
+		world of the web and the endless possibilities it offers.
+		<br /> <br />
+		When I first started out, I spent hours tinkering with CSS to see what I could create. It was then
+		that I realized just how much I loved the web and the incredible potential it holds. From there,
+		I started learning HTML and CSS together, and began creating my own small web pages.
+		<br /> <br />
+		One of the things that I love most about the web is the speed at which you can go from nothing to
+		a fully functional website that can be accessed by anyone, anywhere in the world. It's truly amazing.
+		<br /><br />
+		But beyond that, I am particularly passionate about creating tools and products that are user-focused,
+		rather than the other way around. I believe that the best products are those that help make people's
+		lives easier, rather than getting in their way and hindering their progress.
+		<br /><br />
+		In my work, I strive to create tools and products that are not only functional, but also intuitive
+		and user-friendly. I believe that by putting the needs of the user first, we can create truly remarkable
+		products that can truly make a difference in people's lives.
 	</p>
 	<p class="max-w-prose text-lg leading-loose">
-		I started my education at the University of Connecticut, where I studied Computer Science and
-		quickly realized that it was not for me. After a year and a half, I switched to a major in
-		Digital Media and Design, where the curriculum focused on making something more than a command
-		line program. After the first semester, one of my professors offered me a job at Greenhouse
-		Studios, where I was fortunate enough to work on engaging projects such as
+		I initially began my college education at the University of Connecticut, where I studied
+		Computer Science. However, after just one and a half years, I realized that it was not the right
+		fit for me. I decided to switch my major to Digital Media and Design, where the focus was on
+		creating something more than just a command line program.
+		<br /><br />
+		After my first semester in this new major, I was offered a job at Greenhouse Studios by one of my
+		professors. I was grateful for this opportunity and was able to work on some truly engaging projects,
+		including
 		<a href="/projects/sourcery" class="font-space font-medium text-sky-300 underline">Sourcery</a>
 		and
-		<a href="/work/charlesvr" class="font-space font-medium text-sky-300 underline">CharlesVR</a>. I
-		graduated in 2022 with a B.A. in Digital Media and Design, specializing in Web/Interactive
-		Media.
+		<a href="/work/charlesvr" class="font-space font-medium text-sky-300 underline">CharlesVR</a>.
+		<br /><br />
+		I graduated in 2022 with a Bachelor of Arts in Digital Media and Design, with a specialization in
+		Web/Interactive Media. Throughout my time at the University of Connecticut, I was able to gain valuable
+		experience and knowledge that have helped shape my career. I am excited to continue building upon
+		this foundation and to see where my love for the web and design will take me.
 	</p>
 	<div class="max-w-prose text-lg">
 		<h2 class="mb-2 text-center font-space text-4xl font-bold leading-loose">
 			Now I'm looking for my next opportunity!
 		</h2>
 		<p class="text-lg leading-loose">
-			If my work resonates with you, shoot me an email or DM and I'd love to chat! I'm currently
-			based in Hartford, CT, but I'm open to moving for the right opportunity.
+			As a designer, I'm always looking for new and exciting opportunities to grow and learn. If
+			you've been impressed by my work and want to chat about potential opportunities, I'd love to
+			hear from you!
+			<br /><br />
+			I'm currently based in Hartford, CT, but I'm open to moving for the right opportunity. So if you
+			think I could be a good fit for your team, please don't hesitate to contact me. I'm eager to explore
+			new opportunities and see where my skills and experience can take me.
 		</p>
 	</div>
 	<ArrowLink text="Check out my resume:" icon="mingcute:paper-fill" href="/resume.pdf" />

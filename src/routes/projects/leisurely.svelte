@@ -19,6 +19,9 @@
 		.slice(0, 3);
 </script>
 
+<svelte:head>
+	<title>{project.name} | muellr</title>
+</svelte:head>
 <div class="mx-auto flex w-full max-w-screen-2xl flex-col space-y-8 px-6">
 	<h1 class="w-full font-space text-5xl font-bold">{project.name}</h1>
 	<p class="!mt-2 w-full text-2xl text-cobalt-100 opacity-70">Student Project</p>
@@ -26,12 +29,19 @@
 	<div class="flex items-center gap-8 max-sm:flex-col">
 		<ProjectInfo {project} />
 		<p class="w-fit text-lg leading-relaxed lg:max-w-prose">
-			In 2021, I was approached by a fellow UConn student to help him design an app for a startup he
-			was working on. The app's premise was to take the window shopping experience mobile. By
-			gamifying looking for products, the app would make it easier to find products that you like
-			and want to buy. The app would aggregate online stores and allow users to browse products,
-			save them to a wishlist, and ultimately purchase them. I was brought in to help design the app
-			and create branding for the startup.
+			In 2021, I was approached by a fellow UConn student who was looking to revolutionize the way
+			we shop. He had come up with an innovative idea for an app that would take the traditional
+			window shopping experience and make it mobile. The app, which he called "Leisurely," would
+			gamify the process of looking for products, making it easier and more fun to find the items
+			you love.
+			<br /><br />
+			Leisurely would aggregate online stores and allow users to browse a wide range of products, save
+			them to a wishlist, and ultimately purchase them. The goal was to make shopping more efficient
+			and enjoyable, and to help consumers find the products they want quickly and easily.
+			<br /><br />
+			I was thrilled to be brought on board to help develop the app and create a visual identity for
+			the startup. Working closely with the founder, I crafted a sleek and modern design that would reflect
+			the app's unique approach to shopping.
 		</p>
 		<p class="w-fit text-lg leading-relaxed lg:max-w-prose" />
 	</div>
@@ -39,12 +49,14 @@
 	<h3 class="font-space text-4xl font-bold lowercase leading-relaxed tracking-wide">Branding</h3>
 	<div class="flex justify-between gap-8 max-sm:flex-col">
 		<p class="w-fit text-lg leading-relaxed lg:max-w-prose">
-			For the branding, I wanted to create something simple, clean, and modern. With the idea of
-			window shopping in mind, I created a logo reminiscent of an awning you might see over a
-			storefront. As a simple outline, the logo worked at both small and larger sizes. I started in
-			black and white and tried a couple of color combinations, but when working on the app's UI, I
-			decided to keep the brand colors solely black and white. This helped emphasize the products
-			being showcased.
+			For the branding, I wanted to create something that would be simple, clean, and modern. I
+			wanted to capture the essence of window shopping in the logo, so I came up with a design that
+			was reminiscent of an awning you might see over a storefront. The outline-style logo was
+			versatile and could be used at both small and large sizes. I started by creating the logo in
+			black and white, and then experimented with a few different color combinations. However, when
+			it came time to design the app's user interface, I decided to stick with a black and white
+			color scheme. This helped to emphasize the products being showcased and gave the app a sleek,
+			modern look.
 		</p>
 		<Card class="h-max w-full md:h-96">
 			<div
@@ -62,22 +74,22 @@
 	<h3 class="font-space text-4xl font-bold lowercase leading-relaxed tracking-wide">App Design</h3>
 	<div class="flex justify-between gap-8 max-lg:flex-col">
 		<p class="w-fit text-lg leading-relaxed lg:max-w-prose">
-			When discussing the project with the client, he suggested a card-style interface, that users
-			could swipe left or right to browse through. If the user swiped left, the product would
-			dismiss. If the user swiped right, the product would be saved to their wishlist. I decided to
-			go with this idea, but also add a third option, where the user could swipe up to buy it.
-			Additionally, a user could tap the product card to view more information about it, such as
-			reviews. This would allow users to view more information about a product without having to
-			leave the app.
-			<br />
-			<br />
-
-			As with most of my designs, I created an interface using Figma and the Material Design system.
-			I started focusing on the design of the card. I wanted it to contain images of the product, a
-			star rating, a price, a description, and which store the product is from. After nailing the
-			layout that I wanted, I then designed the rest of the app interface around it. I added buttons
-			beneath the card as alternate triggers for the 3 actions. After several iterations, I started
-			straying away from Material Design and went for a bolder look, like the logo.
+			When discussing the project with the client, he suggested a card-style interface that would
+			allow users to easily browse through products. He suggested using a swipe left or right
+			gesture to dismiss or save items to a wishlist, respectively. I thought this was a great idea,
+			but decided to add a third option where users could swipe up to purchase a product directly
+			from the app.
+			<br /><br />
+			In addition to the swipe gestures, I also incorporated a tap gesture that would allow users to
+			view more information about a product, such as reviews, without having to leave the app. This would
+			provide a seamless and convenient shopping experience for users.
+			<br /><br />
+			To create the design, I used Figma and the Material Design system. I focused on the design of the
+			product card, which would feature images of the product, a star rating, a price, a description,
+			and the store it was from. Once I had the card layout nailed down, I designed the rest of the app
+			interface around it. I added buttons beneath the card as alternate triggers for the three actions,
+			and then experimented with different looks until I settled on a bolder style that complemented
+			the logo.
 		</p>
 		<div class="flex w-full items-center gap-4 max-sm:flex-col">
 			<img

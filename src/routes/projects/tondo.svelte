@@ -35,12 +35,17 @@
 	<div class="flex gap-8 max-sm:flex-col">
 		<ProjectInfo {project} />
 		<p class="max-w-prose self-center text-lg leading-relaxed">
-			Tondo is a a personal project that I started in 2015. It's an icon pack for Android inspired
-			by the Material Design guidelines, but wrapped inside an iOS-like squircle. I created Tondo
-			after receiving positive feedback about my first icon pack, LollyDrop, which also used the
-			then-newly introduced Material Design guidelines. I used Adobe Illustrator along with a base
-			template that I had created in order to make icons quicker. Overtime, the squircle got a bit
-			more squircle-y, and the quality of the icons increased as my skills did.
+			Tondo is a personal project that I started in 2015. It's an icon pack for Android that is
+			inspired by the Material Design guidelines, but has a unique twist - the icons are wrapped in
+			an iOS-like squircle shape.
+			<br /><br />
+			I came up with the idea for Tondo after receiving positive feedback about my first icon pack, LollyDrop.
+			LollyDrop was also based on the Material Design guidelines, and I wanted to build on that success
+			with a new and unique icon pack.
+			<br /><br />
+			To create the icons for Tondo, I used Adobe Illustrator and a base template that I had created
+			to make the process faster and more efficient. Over time, the squircle shape became more pronounced,
+			and the quality of the icons improved as my skills grew.
 		</p>
 	</div>
 	<h3 class="font-space text-4xl font-extrabold lowercase tracking-widest">Early Designs (2015)</h3>
@@ -71,8 +76,13 @@
 	</Card>
 	<h3 class="font-space text-4xl font-extrabold lowercase tracking-widest">Tondo Renewed (2017)</h3>
 	<p class="max-w-prose text-lg leading-relaxed">
-		After taking a break in 2016, I restarted the Tondo project, now working in Figma. Over the
-		years, I've expanded Tondo's iconset to around 200 icons.
+		After taking a break from the Tondo project in 2016, I decided to restart it and begin working
+		on new icons. This time, I chose to use Figma as my design tool, which allowed me to work more
+		efficiently and quickly iterate on my designs.
+		<br /><br />
+		Over the years, I've steadily expanded Tondo's iconset to include over 200 icons. This has required
+		a lot of hard work and dedication, but it's been a rewarding experience. I've been able to continue
+		developing my skills as a designer, and I'm proud of the final product.
 	</p>
 	<Card class="overflow-clip p-0">
 		<img src="/projectassets/tondo/tondopres.png" alt="Onboarding Flow" class="w-full" />
