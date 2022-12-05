@@ -61,9 +61,8 @@
 			Now I'm looking for my next opportunity!
 		</h2>
 		<p class="text-lg leading-loose">
-			As a designer, I'm always looking for new and exciting opportunities to grow and learn. If
-			you've been impressed by my work and want to chat about potential opportunities, I'd love to
-			hear from you!
+			I'm always looking for new and exciting opportunities to grow and learn. If you've been
+			impressed by my work and want to chat about potential roles, I'd love to hear from you!
 			<br /><br />
 			I'm currently based in Hartford, CT, but I'm open to moving for the right opportunity. So if you
 			think I could be a good fit for your team, please don't hesitate to contact me. I'm eager to explore
