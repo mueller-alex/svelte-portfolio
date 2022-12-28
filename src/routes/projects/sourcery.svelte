@@ -26,7 +26,7 @@
 </svelte:head>
 <div
 	id="tint"
-	class="pointer-events-none fixed inset-0 -z-[49] h-screen w-screen bg-[#644ea2] mix-blend-multiply"
+	class="pointer-events-none fixed inset-0 -z-[49] h-screen w-screen bg-[#4f3d7f] mix-blend-multiply"
 	transition:fade
 />
 <div class="mx-auto flex w-full max-w-screen-2xl flex-col space-y-8 px-6">
