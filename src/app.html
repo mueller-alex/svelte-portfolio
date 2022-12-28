@@ -13,9 +13,27 @@
 		/>
 		<script src="lazysizes.min.js" async=""></script>
 		<script src="https://code.iconify.design/iconify-icon/1.0.1/iconify-icon.min.js"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r134/three.min.js"></script>
+		<script src="https://cdn.jsdelivr.net/npm/vanta@0.5.24/dist/vanta.fog.min.js"></script>
 		<title>muellr</title>
 		%svelte.head%
 	</head>
+	<div id="vanta" class="fixed inset-0 -z-50 h-screen w-screen bg-white"></div>
+	<script>
+		const effect = VANTA.FOG({
+			el: '#vanta',
+			mouseControls: false,
+			touchControls: false,
+			gyroControls: false,
+			highlightColor: 0xcccccc,
+			midtoneColor: 0xaaaaaa,
+			lowlightColor: 0x181818,
+			baseColor: 0x0,
+			blurFactor: 0.9,
+			speed: 1.3,
+			zoom: 1.3
+		});
+	</script>
 	<body class="bg-cobalt-900 bg-tile bg-fixed font-normal text-cobalt-50">
 		<div id="svelte">%svelte.body%</div>
 	</body>

@@ -1,4 +1,5 @@
 <script lang="ts">
+	import { fade } from 'svelte/transition';
 	import MoreProjects from './../../components/more-projects.svelte';
 	import Card from '../../components/card.svelte';
 	import ProjectInfo from '../../components/project-info.svelte';
@@ -19,6 +20,11 @@
 <svelte:head>
 	<title>{project.name} | muellr</title>
 </svelte:head>
+<div
+	id="tint"
+	class="pointer-events-none fixed inset-0 -z-[49] h-screen w-screen bg-[#264475] mix-blend-multiply"
+	transition:fade
+/>
 <div class="mx-auto flex w-full max-w-screen-2xl flex-col space-y-8 px-6">
 	<!-- <Card class="grid grid-cols-2 gap-4 rounded-[42px] p-5 sm:grid-cols-4 md:p-6 xl:rounded-[56px]">
 		{#each Array(8) as _, index}

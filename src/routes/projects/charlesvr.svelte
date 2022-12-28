@@ -9,6 +9,7 @@
 	import MoreProjects from '../../components/more-projects.svelte';
 	import Icon from '@iconify/svelte';
 	import { projects } from '../../projects';
+	import { fade } from 'svelte/transition';
 	let projectKey = 'charlesvr';
 	let project = projects.find((x) => x.key === projectKey);
 	let innerWidth;
@@ -22,6 +23,11 @@
 <svelte:head>
 	<title>{project.name} | muellr</title>
 </svelte:head>
+<div
+	id="tint"
+	class="pointer-events-none fixed inset-0 -z-[49] h-screen w-screen bg-[#401221] mix-blend-multiply"
+	transition:fade
+/>
 <div class="mx-auto flex w-full max-w-screen-2xl flex-col space-y-8 px-6">
 	<h1 class="w-full font-space text-5xl font-bold">{project.name}</h1>
 	<p class="!mt-2 w-full text-2xl text-cobalt-100 opacity-70">Greenhouse Studios</p>
