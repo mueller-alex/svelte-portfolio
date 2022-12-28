@@ -23,7 +23,12 @@
 </script>
 
 <svelte:window bind:scrollY={y} bind:innerHeight />
-
+{#if !pageName.includes('projects')}
+	<div
+		class="pointer-events-none fixed inset-0 -z-[49] h-screen w-screen bg-[#374262] mix-blend-multiply"
+		out:fade
+	/>
+{/if}
 <div
 	class="mx-auto flex w-full max-w-screen-3xl flex-col items-center p-8 px-6 md:h-40 md:flex-row md:justify-between"
 >
