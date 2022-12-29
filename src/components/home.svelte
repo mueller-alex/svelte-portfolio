@@ -46,3 +46,9 @@
 		<SocialLinks class="w-full md:w-max" />
 	</div>
 </div>
+
+<style>
+	h1 {
+		text-shadow: 0px 4px 16px rgba(0, 0, 0, 0.2);
+	}
+</style>
