@@ -1,9 +1,9 @@
 <script>
-	import ArrowLink from './../../components/arrow-link.svelte';
-	import Card from '../../components/card.svelte';
-	import ProjectInfo from '../../components/project-info.svelte';
-	import MoreProjects from '../../components/more-projects.svelte';
-	import { projects } from '../../projects';
+	import ArrowLink from '../../../components/arrow-link.svelte';
+	import Card from '../../../components/card.svelte';
+	import ProjectInfo from '../../../components/project-info.svelte';
+	import MoreProjects from '../../../components/more-projects.svelte';
+	import { projects } from '../../../projects';
 	import { fade } from 'svelte/transition';
 	let projectKey = 'charlesvr';
 	let project = projects.find((x) => x.key === projectKey);

@@ -1,14 +1,10 @@
 <script>
-	import Icon from '@iconify/svelte';
 	import SocialLinks from './../components/social-links.svelte';
 	import Footer from './../components/footer.svelte';
-	import { base, assets } from '$app/paths';
 	import '../app.css';
 	import { fade, fly } from 'svelte/transition';
-	import { dev } from '$app/env';
 	import Card from './../components/card.svelte';
 	import { page } from '$app/stores';
-	import About from './about.svelte';
 	let y = 0;
 	let innerHeight = 0;
 	let bounce = false;

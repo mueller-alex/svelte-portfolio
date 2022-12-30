@@ -1,23 +1,13 @@
 <script>
 	import { fade } from 'svelte/transition';
-	import ArrowLink from './../../components/arrow-link.svelte';
-	import Sourcery from './sourcery.svelte';
-	import Button from '../../components/button.svelte';
-	import Card from '../../components/card.svelte';
+	import ArrowLink from '../../../components/arrow-link.svelte';
+	import Card from '../../../components/card.svelte';
 	import { page } from '$app/stores';
-	import ProjectInfo from '../../components/project-info.svelte';
-	import ProjectTile from '../../components/project-tile.svelte';
-	import MoreProjects from '../../components/more-projects.svelte';
-	import Icon from '@iconify/svelte';
-	import { projects } from '../../projects';
+	import ProjectInfo from '../../../components/project-info.svelte';
+	import MoreProjects from '../../../components/more-projects.svelte';
+	import { projects } from '../../../projects';
 	let projectKey = 'leisurely';
 	let project = projects.find((x) => x.key === projectKey);
-	let innerWidth;
-	let shownProjects = projects
-		.filter((x) => x.hidden == false)
-		.filter((x) => x.key != projectKey)
-		.sort(() => Math.random() - 0.5)
-		.slice(0, 3);
 </script>
 
 <svelte:head>

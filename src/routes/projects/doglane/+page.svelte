@@ -1,13 +1,12 @@
 <script lang="ts">
 	import { fade } from 'svelte/transition';
-	import ArrowLink from './../../components/arrow-link.svelte';
-	import MoreProjects from '../../components/more-projects.svelte';
-	import Card from '../../components/card.svelte';
-	import ProjectInfo from '../../components/project-info.svelte';
-	import { page } from '$app/stores';
-	import ProjectCard from '../../components/project-card.svelte';
-	import type { Project } from '../../projects';
-	import { projects } from '../../projects';
+	import ArrowLink from '../../../components/arrow-link.svelte';
+	import MoreProjects from '../../../components/more-projects.svelte';
+	import Card from '../../../components/card.svelte';
+	import ProjectInfo from '../../../components/project-info.svelte';
+	import ProjectCard from '../../../components/project-card.svelte';
+	import type { Project } from '../../../projects';
+	import { projects } from '../../../projects';
 	let projectKey = 'doglane';
 	let project = projects.find((x) => x.key === projectKey);
 	let innerWidth;

@@ -11,15 +11,15 @@
 			href="https://api.fontshare.com/v2/css?f[]=space-grotesk@1&display=swap"
 			rel="stylesheet"
 		/>
-		<script src="lazysizes.min.js" async=""></script>
+		<!-- <script src="lazysizes.min.js" async=""></script> -->
 		<script src="https://code.iconify.design/iconify-icon/1.0.1/iconify-icon.min.js"></script>
 		<script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r134/three.min.js"></script>
 		<script src="https://cdn.jsdelivr.net/npm/vanta@0.5.24/dist/vanta.fog.min.js"></script>
 		<title>muellr</title>
-		%svelte.head%
+		%sveltekit.head%
 	</head>
 	<body class="bg-cobalt-900 bg-tile bg-fixed font-normal text-cobalt-50">
-		<div id="svelte">%svelte.body%</div>
+		<div id="svelte">%sveltekit.body%</div>
 		<div
 			id="vanta"
 			class="pointer-events-none fixed inset-0 -z-50 h-screen w-screen bg-white"

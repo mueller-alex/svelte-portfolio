@@ -1,15 +1,15 @@
 <script lang="ts">
-	import ProjectRow from './../components/project-row.svelte';
-	import Card from './../components/card.svelte';
-	import ProjectTile from './../components/project-tile.svelte';
+	import ProjectRow from '../../components/project-row.svelte';
+	import Card from '../../components/card.svelte';
+	import ProjectTile from '../../components/project-tile.svelte';
 	// import Profile from './../components/profile.svelte';
-	import SocialLinks from './../components/social-links.svelte';
+	import SocialLinks from '../../components/social-links.svelte';
 
 	import Icon from '@iconify/svelte';
 	import { fade, fly } from 'svelte/transition';
 	import { flip } from 'svelte/animate';
-	import { projects } from '../projects';
-	import Home from './../components/home.svelte';
+	import { projects } from '../../projects';
+	import Home from '../../components/home.svelte';
 	let shownProjects = projects.filter((x) => x.hidden == false);
 	let designList = shownProjects.filter(
 		(x) => x.projectType == 'design' || x.projectType == 'both'

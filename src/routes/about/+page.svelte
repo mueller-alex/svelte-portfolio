@@ -1,9 +1,9 @@
 <script>
-	import ArrowLink from './../components/arrow-link.svelte';
-	import Card from './../components/card.svelte';
-	import AboutCard from './../components/about-card.svelte';
-	import SocialLinks from './../components/social-links.svelte';
-	import Profile from '../components/profile.svelte';
+	import ArrowLink from '../../components/arrow-link.svelte';
+	import Card from '../../components/card.svelte';
+	import AboutCard from '../../components/about-card.svelte';
+	import SocialLinks from '../../components/social-links.svelte';
+	import Profile from '../../components/profile.svelte';
 </script>
 
 <svelte:head>
