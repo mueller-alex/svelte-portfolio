@@ -1,16 +1,16 @@
 <script>
 	import { fade } from 'svelte/transition';
-	import ArrowLink from '../../components/arrow-link.svelte';
+	import ArrowLink from '../../../components/arrow-link.svelte';
 
-	import Sourcery from './sourcery.svelte';
-	import Button from './../../components/button.svelte';
-	import Card from './../../components/card.svelte';
+	import Sourcery from '../sourcery.svelte';
+	import Button from '../../../components/button.svelte';
+	import Card from '../../../components/card.svelte';
 	import { page } from '$app/stores';
-	import ProjectInfo from '../../components/project-info.svelte';
-	import ProjectTile from '../../components/project-tile.svelte';
-	import MoreProjects from '../../components/more-projects.svelte';
+	import ProjectInfo from '../../../components/project-info.svelte';
+	import ProjectTile from '../../../components/project-tile.svelte';
+	import MoreProjects from '../../../components/more-projects.svelte';
 	import Icon from '@iconify/svelte';
-	import { projects } from '../../projects';
+	import { projects } from '../../../projects';
 	let projectKey = 'sourcery';
 	let project = projects.find((x) => x.key === projectKey);
 	let innerWidth;
