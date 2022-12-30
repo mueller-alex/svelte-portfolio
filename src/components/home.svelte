@@ -49,6 +49,6 @@
 
 <style>
 	h1 {
-		text-shadow: 0px 4px 16px rgba(0, 0, 0, 0.2);
+		text-shadow: 0px 4px 24px rgba(0, 0, 0, 0.45);
 	}
 </style>

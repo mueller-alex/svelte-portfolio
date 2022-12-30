@@ -33,10 +33,16 @@
 	<div class="flex gap-8 max-sm:flex-col">
 		<ProjectInfo {project} />
 		<p class="max-w-prose self-center text-lg leading-relaxed">
-			Dog Lane Café is a small restaurant located in Storrs, CT. They specialize in
-			European/American style dishes and offer a width variety of option for breakfast, lunch, or
-			dinner. For my junior year Design Lab course, we were tasked to rebrand Dog Lane Café and then
-			design and prototype an app for their business.
+			Dog Lane Café is a small, locally-owned restaurant located in the town of Storrs, Connecticut.
+			They are known for their European and American-style dishes, which are available for
+			breakfast, lunch, and dinner. As part of my junior year Design Lab course, we were tasked with
+			rebranding Dog Lane Café and designing and prototyping an app for the business. The goal of
+			the rebranding project was to give the restaurant a fresh, modern look that would attract new
+			customers and establish the restaurant as a go-to destination. The app was designed to enhance
+			the customer experience and make it easier for people to find out about the restaurant, view
+			menus and specials, make reservations, and place orders. Overall, the rebranding and app
+			development project was an exciting opportunity for the students to put their design skills to
+			the test.
 		</p>
 	</div>
 	<h3 class="font-space text-4xl font-extrabold lowercase tracking-widest">Branding</h3>

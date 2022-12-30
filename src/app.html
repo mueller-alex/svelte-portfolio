@@ -18,24 +18,27 @@
 		<title>muellr</title>
 		%svelte.head%
 	</head>
-	<div id="vanta" class="fixed inset-0 -z-50 h-screen w-screen bg-white"></div>
-	<script>
-		const effect = VANTA.FOG({
-			el: '#vanta',
-			mouseControls: false,
-			touchControls: false,
-			gyroControls: false,
-			highlightColor: 0xcccccc,
-			midtoneColor: 0xaaaaaa,
-			lowlightColor: 0x181818,
-			baseColor: 0x0,
-			blurFactor: 0.9,
-			speed: 1.7,
-			zoom: 1.3
-		});
-	</script>
 	<body class="bg-cobalt-900 bg-tile bg-fixed font-normal text-cobalt-50">
 		<div id="svelte">%svelte.body%</div>
+		<div
+			id="vanta"
+			class="pointer-events-none fixed inset-0 -z-50 h-screen w-screen bg-white"
+		></div>
+		<script>
+			const effect = VANTA.FOG({
+				el: '#vanta',
+				mouseControls: false,
+				touchControls: false,
+				gyroControls: false,
+				highlightColor: 0xcccccc,
+				midtoneColor: 0xbbbbbb,
+				lowlightColor: 0x0,
+				baseColor: 0x0,
+				blurFactor: 0.9,
+				speed: 1.7,
+				zoom: 1.3
+			});
+		</script>
 	</body>
 	<style>
 		html,

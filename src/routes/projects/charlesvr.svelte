@@ -1,23 +1,12 @@
 <script>
 	import ArrowLink from './../../components/arrow-link.svelte';
-	import Sourcery from './sourcery.svelte';
-	import Button from '../../components/button.svelte';
 	import Card from '../../components/card.svelte';
-	import { page } from '$app/stores';
 	import ProjectInfo from '../../components/project-info.svelte';
-	import ProjectTile from '../../components/project-tile.svelte';
 	import MoreProjects from '../../components/more-projects.svelte';
-	import Icon from '@iconify/svelte';
 	import { projects } from '../../projects';
 	import { fade } from 'svelte/transition';
 	let projectKey = 'charlesvr';
 	let project = projects.find((x) => x.key === projectKey);
-	let innerWidth;
-	let shownProjects = projects
-		.filter((x) => x.hidden == false)
-		.filter((x) => x.key != projectKey)
-		.sort(() => Math.random() - 0.5)
-		.slice(0, 3);
 </script>
 
 <svelte:head>
@@ -32,7 +21,7 @@
 	<h1 class="w-full font-space text-5xl font-bold">{project.name}</h1>
 	<p class="!mt-2 w-full text-2xl text-cobalt-100 opacity-70">Greenhouse Studios</p>
 	<h3 class="font-space text-4xl font-extrabold lowercase tracking-wide">Overview</h3>
-	<div class="flex items-center gap-8 max-sm:flex-col">
+	<div class="flex gap-8 max-sm:flex-col">
 		<ProjectInfo {project} />
 		<p class="w-fit text-lg leading-relaxed lg:max-w-prose">
 			Charles VR is a virtual reality reconstruction of the coronation of Holy Roman Emperor Charles

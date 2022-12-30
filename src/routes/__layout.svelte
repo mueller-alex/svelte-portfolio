@@ -34,7 +34,7 @@
 >
 	<a href="/">
 		<svg
-			class="transition-all"
+			class=" transition-all"
 			width="48"
 			height="48"
 			viewBox="0 0 129 129"
@@ -57,7 +57,7 @@
 	class="pointer-events-none fixed bottom-0 z-50 grid h-32 w-full place-items-center px-2 md:top-0 md:h-40"
 >
 	<nav
-		class="pointer-events-auto mx-auto flex w-full items-baseline justify-between rounded-3xl border-2 border-white/10 bg-black bg-opacity-10 bg-glass bg-[length:150px] p-3 font-space font-medium lowercase tracking-wider shadow-none shadow-black/60 backdrop-blur-lg backdrop-contrast-[1.1] transition-all duration-300 sm:gap-4 md:w-max md:max-w-xl md:text-xl xl:w-full"
+		class="pointer-events-auto mx-auto flex w-full items-baseline justify-between rounded-3xl border-2 border-white/10 bg-black bg-opacity-10 bg-glass bg-[length:150px] p-3 font-space font-medium lowercase tracking-wider shadow-lg backdrop-blur-lg backdrop-contrast-[1.1] transition-all duration-300 sm:gap-4 md:w-max md:max-w-xl md:text-xl xl:w-full"
 		class:bg-opacity-30={y > 0}
 		class:shadow-2xl={y > 0}
 	>

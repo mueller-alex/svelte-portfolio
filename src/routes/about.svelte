@@ -10,8 +10,8 @@
 	<title>About | muellr.xyz</title>
 </svelte:head>
 <div class="mx-auto flex w-full max-w-screen-lg flex-col items-center gap-8 px-6">
-	<Card class="overflow-clip p-0">
-		<img src="/uconn.jpg" alt="" class="max-w-prose" />
+	<Card class="w-full max-w-prose overflow-clip p-0">
+		<img src="/uconn.jpg" alt="" class="w-full " />
 	</Card>
 	<h1 class="font-space text-6xl font-bold">
 		<iconify-icon icon="ph:hand-waving-fill" class="origin-[70%_70%] animate-wave" inline />
@@ -57,7 +57,7 @@
 		this foundation and to see where my love for the web and design will take me.
 	</p>
 	<div class="max-w-prose text-lg">
-		<h2 class="mb-2 text-center font-space text-4xl font-bold leading-loose">
+		<h2 class="my-2 text-center font-space text-4xl font-bold leading-loose">
 			Now I'm looking for my next opportunity!
 		</h2>
 		<p class="text-lg leading-loose">

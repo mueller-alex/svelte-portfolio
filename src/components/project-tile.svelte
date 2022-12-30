@@ -12,7 +12,7 @@
 >
 	<div class="flex w-full items-center justify-between">
 		<div
-			class="origin-left text-white/80 transition-all duration-300 ease-in-out group-hover:scale-110"
+			class="origin-top-left text-white transition-all duration-300 ease-in-out group-hover:scale-110"
 		>
 			<h2 class="mb font-space text-2xl font-bold leading-snug tracking-wide md:text-3xl">
 				{project.name}

@@ -63,8 +63,7 @@ export const projects: Project[] = [
 		name: 'Dog Lane Café',
 		subtitle: 'Branding',
 		link: ['https://www.behance.net/gallery/96296037/Dog-Lane-UX-Exploration', 'View Case Study'],
-		backgroundColor: 'hsla(14,87%,70%, 30%)',
-		textColor: 'hsl(14, 92%, 65%)',
+		backgroundColor: 'hsla(14,97%,65%, 30%)',
 		role: 'Branding Designer',
 		timeline: 'Feb 2020',
 		skills: 'Adobe Illustrator, Figma'
@@ -91,7 +90,7 @@ export const projects: Project[] = [
 		projectType: 'design',
 		name: 'Tondo',
 		subtitle: 'Iconography',
-		backgroundColor: 'hsla(218, 49%, 64%, 30%)',
+		backgroundColor: 'hsla(217, 89%, 64%, 30%)',
 		textColor: 'hsl(47, 100%, 69%)',
 		role: 'Iconography',
 		timeline: 'November 2015',

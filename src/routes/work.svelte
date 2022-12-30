@@ -20,8 +20,12 @@
 <svelte:head>
 	<title>Work | muellr.xyz</title>
 </svelte:head>
-<div class="mx-auto w-full max-w-screen-3xl px-6">
-	<div class="mt-8 grid auto-rows-auto grid-cols-1 gap-8 md:grid-cols-3">
+<div class="mx-auto w-full max-w-screen-lg px-6">
+	<h1 class="font-space text-6xl font-bold">
+		<!-- <iconify-icon icon="mingcute:grid-fill" inline /> -->
+		my work
+	</h1>
+	<div class="mt-8 grid auto-rows-auto grid-cols-1 gap-8 md:grid-cols-2">
 		{#each shownProjects as project}
 			<ProjectTile {project} />
 		{/each}
