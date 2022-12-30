@@ -3,18 +3,9 @@
 	import MoreProjects from '../../../components/more-projects.svelte';
 	import Card from '../../../components/card.svelte';
 	import ProjectInfo from '../../../components/project-info.svelte';
-	import { page } from '$app/stores';
-	import ProjectCard from '../../../components/project-card.svelte';
-	import type { Project } from '../../../projects';
 	import { projects } from '../../../projects';
 	let projectKey = 'tondo';
 	let project = projects.find((x) => x.key === projectKey);
-	let innerWidth;
-	let shownProjects = projects
-		.filter((x) => x.hidden == false)
-		.filter((x) => x.key != 'sourcery')
-		.sort(() => Math.random() - 0.5)
-		.slice(0, 3);
 </script>
 
 <svelte:head>
