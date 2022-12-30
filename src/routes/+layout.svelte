@@ -59,7 +59,7 @@
 	>
 		<a
 			class="flex w-full flex-col items-center justify-center  rounded-xl bg-white bg-opacity-0 p-3 text-center transition-colors hover:bg-opacity-10 lg:px-6"
-			class:bg-opacity-10={pageName === '/'}
+			class:!bg-opacity-10={pageName == '/'}
 			href="/"
 		>
 			<iconify-icon icon="mingcute:home-4-fill" />
@@ -67,7 +67,7 @@
 		</a>
 		<a
 			class="flex w-full flex-col items-center justify-center  rounded-xl bg-white bg-opacity-0 p-3 text-center transition-colors hover:bg-opacity-10 lg:px-6"
-			class:bg-opacity-10={pageName === '/about'}
+			class:!bg-opacity-10={pageName === '/about'}
 			href="/about"
 		>
 			<iconify-icon icon="mingcute:user-3-fill" />
@@ -75,7 +75,7 @@
 		</a>
 		<a
 			class="flex w-full flex-col items-center justify-center  rounded-xl bg-white bg-opacity-0 p-3 text-center transition-colors hover:bg-opacity-10 lg:px-6"
-			class:bg-opacity-10={pageName === '/work' || pageName.includes('/projects')}
+			class:!bg-opacity-10={pageName === '/work' || pageName.includes('/projects')}
 			href="/work"
 		>
 			<iconify-icon icon="mingcute:grid-fill" />
@@ -89,6 +89,7 @@
 	class="fixed bottom-4 z-50 hidden w-full cursor-pointer justify-center text-center transition-opacity sm:flex"
 	class:opacity-0={y > innerHeight / 12 || !bounce || !pageName.includes('/projects')}
 	on:click={scroll}
+	on:keypress={scroll}
 >
 	<Card class="grid animate-bounce-slow place-items-center text-2xl">
 		<iconify-icon icon="pajamas:scroll-down" class=" " />
