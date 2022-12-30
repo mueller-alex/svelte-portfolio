@@ -1,20 +1,8 @@
 <script lang="ts">
-	import ProjectRow from './../components/project-row.svelte';
-	import Card from './../components/card.svelte';
-	import ProjectTile from './../components/project-tile.svelte';
-	// import Profile from './../components/profile.svelte';
-	import SocialLinks from './../components/social-links.svelte';
-
-	import Icon from '@iconify/svelte';
-	import { fade, fly } from 'svelte/transition';
-	import { flip } from 'svelte/animate';
+	import ProjectTile from '$c/project-tile.svelte';
 	import { projects } from '../projects';
-	import Home from './../components/home.svelte';
+	import Home from '$c/home.svelte';
 	let shownProjects = projects.filter((x) => x.hidden == false);
-	let designList = shownProjects.filter(
-		(x) => x.projectType == 'design' || x.projectType == 'both'
-	);
-	let devList = shownProjects.filter((x) => x.projectType == 'dev' || x.projectType == 'both');
 </script>
 
 <svelte:head>

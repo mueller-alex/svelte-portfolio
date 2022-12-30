@@ -1,4 +1,10 @@
+const plugin = require('tailwindcss/plugin');
 module.exports = {
+	plugins: [
+		plugin(function ({ addVariant }) {
+			addVariant('hocus', ['&:hover', '&:focus']);
+		})
+	],
 	content: ['./src/**/*.{html,js,svelte,ts}'],
 	theme: {
 		fontFamily: {
@@ -70,6 +76,5 @@ module.exports = {
 				}
 			}
 		}
-	},
-	plugins: []
+	}
 };

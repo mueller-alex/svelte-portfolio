@@ -5,7 +5,7 @@
 </script>
 
 <Card
-	class="group relative flex aspect-square flex-col items-center justify-between overflow-clip rounded-[36px] p-6 !pb-0  backdrop-blur-[1.5px] transition-all duration-300 hover:border-white/[.15] active:translate-y-2 active:shadow-sm md:rounded-[48px] md:p-10"
+	class="group relative flex aspect-square flex-col items-center justify-between overflow-clip rounded-[36px] p-6 !pb-0 transition-all duration-300 hover:border-white/[.15] active:translate-y-2 active:shadow-sm md:rounded-[48px] md:p-10"
 	backgroundColor={project.backgroundColor}
 	href="/projects/{project.key}"
 	noBlur

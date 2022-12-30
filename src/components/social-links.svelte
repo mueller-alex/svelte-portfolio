@@ -12,34 +12,34 @@
 	<a
 		href="mailto:alex@muellr.xyz"
 		title="Email"
-		class="grid w-full place-items-center rounded-xl p-[10px] text-mueller-100 transition-colors duration-300 hover:bg-red-50 hover:text-red-900 focus:scale-[1.2] focus:outline-none"
+		class="grid w-full place-items-center rounded-xl p-[10px] text-mueller-100 transition-colors duration-300 hocus:bg-red-50 hocus:text-red-900 "
 	>
 		<iconify-icon icon="majesticons:mail" />
 	</a>
 	<a
 		href="https://www.linkedin.com/in/alexmueller392/"
 		title="LinkedIn"
-		class="grid w-full place-items-center rounded-xl p-[10px] text-mueller-100 transition-colors duration-300 hover:bg-cyan-50 hover:text-[#0077b5] focus:scale-[1.2] focus:outline-none"
+		class="grid w-full place-items-center rounded-xl p-[10px] text-mueller-100 transition-colors duration-300 hocus:bg-cyan-50 hocus:text-[#0077b5] "
 	>
 		<iconify-icon icon="eva:linkedin-fill" />
 	</a>
 	<a
 		href="https://github.com/mueller-alex"
 		title="GitHub"
-		class="grid w-full place-items-center rounded-xl p-[10px] text-mueller-100 drop-shadow transition-colors duration-300 hover:bg-black/5 hover:bg-white hover:text-black focus:scale-[1.2] focus:outline-none"
+		class="grid w-full place-items-center rounded-xl p-[10px] text-mueller-100 drop-shadow transition-colors duration-300 hocus:bg-black/5 hocus:bg-white hocus:text-black "
 	>
 		<iconify-icon icon="mingcute:github-fill" />
 	</a>
 	<a
 		href="https://www.behance.net/muelleralex"
-		class="grid w-full place-items-center rounded-xl p-[10px] text-mueller-100 transition-colors duration-300 hover:bg-blue-50 hover:text-[#1769ff] focus:scale-[1.2] focus:outline-none"
+		class="grid w-full place-items-center rounded-xl p-[10px] text-mueller-100 transition-colors duration-300 hocus:bg-blue-50 hocus:text-[#1769ff] "
 	>
 		<iconify-icon icon="ph:behance-logo-bold" />
 	</a>
 	<a
 		href="https://twitter.com/almrdesign"
 		title="Twitter"
-		class="relative grid w-full place-items-center rounded-xl p-[10px]  text-mueller-100 transition-colors duration-300 hover:bg-sky-50 hover:text-[#1da1f2] focus:scale-[1.2] focus:outline-none"
+		class="relative grid w-full place-items-center rounded-xl p-[10px]  text-mueller-100 transition-colors duration-300 hocus:bg-sky-50 hocus:text-[#1da1f2] "
 	>
 		<iconify-icon icon="eva:twitter-fill" />
 	</a>
