@@ -4,7 +4,6 @@
 	import MoreProjects from '../../components/more-projects.svelte';
 	import Card from '../../components/card.svelte';
 	import ProjectInfo from '../../components/project-info.svelte';
-	import { page } from '$app/stores';
 	import ProjectCard from '../../components/project-card.svelte';
 	import type { Project } from '../../projects';
 	import { projects } from '../../projects';
