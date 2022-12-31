@@ -6,6 +6,7 @@ export interface Project {
 	subtitle: string;
 	link?: [string, string];
 	backgroundColor: string;
+	vantaColor?: string;
 	textColor?: string;
 	role: string;
 	skills: string;
@@ -33,6 +34,7 @@ export const projects: Project[] = [
 		subtitle: 'UX Design',
 		link: ['https://sourceryapp.org', 'Visit Sourcery'],
 		backgroundColor: 'hsl(256, 35%, 47%, 40%)',
+		vantaColor: '#4f3d7f',
 		textColor: 'hsl(261, 67%, 91%)',
 		role: 'UX Engineer',
 		timeline: 'Feb 2020 - May 2022',
@@ -49,6 +51,7 @@ export const projects: Project[] = [
 		subtitle: 'Front End Development',
 		link: ['https://greenhousestudios.github.io/charlesvr/chapter/1.html', 'Visit CharlesVR'],
 		backgroundColor: 'hsl(340, 56%, 56%, 25%)',
+		vantaColor: '#401221',
 		role: 'Lead Developer',
 		timeline: 'Feb 2020 - May 2022',
 		skills: 'Svelte, TailwindCSS',
@@ -64,6 +67,7 @@ export const projects: Project[] = [
 		subtitle: 'Branding',
 		link: ['https://www.behance.net/gallery/96296037/Dog-Lane-UX-Exploration', 'View Case Study'],
 		backgroundColor: 'hsla(14,97%,65%, 30%)',
+		vantaColor: '#774a32',
 		role: 'Branding Designer',
 		timeline: 'Feb 2020',
 		skills: 'Adobe Illustrator, Figma'
@@ -75,6 +79,7 @@ export const projects: Project[] = [
 		name: 'Leisurely',
 		subtitle: 'UI Design',
 		backgroundColor: '#FFFFFF32',
+		vantaColor: '#555',
 		textColor: '#fff',
 		role: 'UI Designer',
 		timeline: 'Mar 2021',
@@ -91,6 +96,7 @@ export const projects: Project[] = [
 		name: 'Tondo',
 		subtitle: 'Iconography',
 		backgroundColor: 'hsla(217, 89%, 64%, 30%)',
+		vantaColor: '#264475',
 		textColor: 'hsl(47, 100%, 69%)',
 		role: 'Iconography',
 		timeline: 'November 2015',

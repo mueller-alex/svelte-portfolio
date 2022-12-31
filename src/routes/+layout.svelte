@@ -1,46 +1,44 @@
 <script>
-	import SocialLinks from './../components/social-links.svelte';
-	import Footer from './../components/footer.svelte';
+	import SocialLinks from '$c/social-links.svelte';
+	import Footer from '$c/footer.svelte';
 	import '../app.css';
 	import { fade, fly } from 'svelte/transition';
-	import Card from './../components/card.svelte';
+	import Card from '$c/card.svelte';
+	import Logo from '$c/logo.svelte';
 	import { page } from '$app/stores';
+	import { projects } from '../projects';
 	let y = 0;
 	let innerHeight = 0;
 	let bounce = false;
+	let vantaColor = '#374262';
 	$: setTimeout(() => {
 		bounce = y == 0;
 	}, 5000);
-	// set scroll position to innerheight on click
 	function scroll() {
 		y = innerHeight - 96;
 	}
 	$: pageName = $page.url.pathname;
+	$: {
+		console.log(pageName);
+		if (pageName.includes('/projects')) {
+			const projectKey = pageName.split('/projects/')[1];
+			vantaColor = projects.find((x) => x.key === projectKey).vantaColor;
+		} else {
+			vantaColor = '#374262';
+		}
+	}
 </script>
 
 <svelte:window bind:scrollY={y} bind:innerHeight />
-{#if !pageName.includes('projects')}
-	<div
-		class="pointer-events-none fixed inset-0 -z-[49] h-screen w-screen bg-[#374262] mix-blend-multiply"
-		out:fade
-	/>
-{/if}
+<div
+	class="pointer-events-none fixed inset-0 -z-[49] h-screen w-screen mix-blend-multiply transition-colors duration-500 ease-in-out"
+	style:background={vantaColor}
+/>
 <div
 	class="mx-auto flex w-full max-w-screen-3xl flex-col items-center p-8 px-6 md:h-40 md:flex-row md:justify-between"
 >
 	<a href="/">
-		<svg
-			class=" transition-all"
-			width="48"
-			height="48"
-			viewBox="0 0 129 129"
-			xmlns="http://www.w3.org/2000/svg"
-		>
-			<path
-				d="M91.2209 109.136C90.4412 108.668 89.8553 107.936 89.5698 107.073L65.2842 33.6322C64.9573 32.6436 63.5603 32.6391 63.227 33.6255L38.4016 107.089C38.1133 107.942 37.5308 108.665 36.7584 109.128L5.81014 127.695C2.549 129.651 -1.2435 126.13 0.46685 122.734L61.0574 2.41476C62.4642 -0.378661 66.4567 -0.367443 67.8477 2.43384L127.627 122.823C129.313 126.219 125.526 129.716 122.274 127.765L91.2209 109.136Z"
-				fill="currentColor"
-			/>
-		</svg>
+		<Logo />
 	</a>
 	<SocialLinks
 		noGlass
