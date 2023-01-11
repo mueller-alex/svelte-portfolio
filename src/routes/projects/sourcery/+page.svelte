@@ -55,8 +55,8 @@
 		and helped me to hone my skills in creating user flows and implementing designs in code.
 	</p>
 	<p class="max-w-prose text-lg leading-relaxed" />
-	<Card class="p-6" backgroundColor="#161023">
-		<img src="/projectassets/sourcery/loginflow.png" alt="Onboarding Flow" class="rounded-xl" />
+	<Card class="p-6">
+		<img src="/projectassets/sourcery/loginflow.png" alt="Onboarding Flow" />
 	</Card>
 	<!-- <Card class="relative aspect-[9/16] sm:aspect-video">
 		<iframe

@@ -2,7 +2,6 @@
 	import SocialLinks from '$c/social-links.svelte';
 	import Footer from '$c/footer.svelte';
 	import '../app.css';
-	import { fade, fly } from 'svelte/transition';
 	import Card from '$c/card.svelte';
 	import Logo from '$c/logo.svelte';
 	import { page } from '$app/stores';
@@ -11,15 +10,16 @@
 	let innerHeight = 0;
 	let bounce = false;
 	let vantaColor = '#374262';
-	$: setTimeout(() => {
-		bounce = y == 0;
-	}, 5000);
 	function scroll() {
 		y = innerHeight - 96;
 	}
 	$: pageName = $page.url.pathname;
 	$: {
-		console.log(pageName);
+		bounce = false;
+		setTimeout(() => {
+			pageName;
+			bounce = y == 0;
+		}, 5000);
 		if (pageName.includes('/projects')) {
 			const projectKey = pageName.split('/projects/')[1];
 			vantaColor = projects.find((x) => x.key === projectKey).vantaColor;
@@ -50,13 +50,14 @@
 <div
 	class="pointer-events-none fixed bottom-0 z-50 grid h-32 w-full place-items-center px-2 md:top-0 md:h-40"
 >
-	<nav
-		class="pointer-events-auto mx-auto flex w-full items-baseline justify-between rounded-3xl border-2 border-white/10 bg-black bg-opacity-10 bg-glass bg-[length:150px] p-3 font-space font-medium lowercase tracking-wider shadow-lg backdrop-blur-lg backdrop-contrast-[1.1] transition-all duration-300 sm:gap-4 md:w-max md:max-w-xl md:text-xl xl:w-full"
-		class:bg-opacity-30={y > 0}
-		class:shadow-2xl={y > 0}
+	<Card
+		class="pointer-events-auto mx-auto flex w-full items-baseline justify-between !bg-black font-space font-medium lowercase tracking-wider shadow-black/30 backdrop-blur-lg backdrop-contrast-[1.1] transition-all duration-300 sm:gap-4 md:w-max md:max-w-xl md:text-xl xl:w-full
+		{y > 0 ? 'shadow-2xl' : 'shadow-lg'}
+		{y > 0 ? '!bg-opacity-30' : '!bg-opacity-10'}"
+		as="nav"
 	>
 		<a
-			class="flex w-full flex-col items-center justify-center  rounded-xl bg-white bg-opacity-0 p-3 text-center transition-colors hover:bg-opacity-10 lg:px-6"
+			class="flex w-full flex-col items-center justify-center rounded-xl bg-white bg-opacity-0 p-3 text-center transition-colors hover:bg-opacity-10 lg:px-6"
 			class:!bg-opacity-10={pageName == '/'}
 			href="/"
 		>
@@ -64,7 +65,7 @@
 			Home
 		</a>
 		<a
-			class="flex w-full flex-col items-center justify-center  rounded-xl bg-white bg-opacity-0 p-3 text-center transition-colors hover:bg-opacity-10 lg:px-6"
+			class="flex w-full flex-col items-center justify-center rounded-xl bg-white bg-opacity-0 p-3 text-center transition-colors hover:bg-opacity-10 lg:px-6"
 			class:!bg-opacity-10={pageName === '/about'}
 			href="/about"
 		>
@@ -72,14 +73,14 @@
 			About
 		</a>
 		<a
-			class="flex w-full flex-col items-center justify-center  rounded-xl bg-white bg-opacity-0 p-3 text-center transition-colors hover:bg-opacity-10 lg:px-6"
+			class="flex w-full flex-col items-center justify-center rounded-xl bg-white bg-opacity-0 p-3 text-center transition-colors hover:bg-opacity-10 lg:px-6"
 			class:!bg-opacity-10={pageName === '/work' || pageName.includes('/projects')}
 			href="/work"
 		>
 			<iconify-icon icon="mingcute:grid-fill" />
 			work
 		</a>
-	</nav>
+	</Card>
 </div>
 <slot />
 
@@ -109,6 +110,4 @@
 	:global(body) 
 		margin: 0
 		font-weight: 600
-
-
 </style>
