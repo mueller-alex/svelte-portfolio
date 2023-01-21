@@ -17,11 +17,10 @@
 	$: {
 		bounce = false;
 		setTimeout(() => {
-			pageName;
 			bounce = y == 0;
 		}, 5000);
 		if (pageName.includes('/projects')) {
-			const projectKey = pageName.split('/projects/')[1];
+			const projectKey = pageName.split('/projects/')[1].split('/')[0];
 			vantaColor = projects.find((x) => x.key === projectKey).vantaColor;
 		} else {
 			vantaColor = '#374262';
@@ -52,8 +51,7 @@
 >
 	<Card
 		class="pointer-events-auto mx-auto flex w-full items-baseline justify-between !bg-black font-space font-medium lowercase tracking-wider shadow-black/30 backdrop-blur-lg backdrop-contrast-[1.1] transition-all duration-300 sm:gap-4 md:w-max md:max-w-xl md:text-xl xl:w-full
-		{y > 0 ? 'shadow-2xl' : 'shadow-lg'}
-		{y > 0 ? '!bg-opacity-30' : '!bg-opacity-10'}"
+		{y > 0 ? 'shadow-2xl !bg-opacity-30' : 'shadow-lg !bg-opacity-10'}"
 		as="nav"
 	>
 		<a
@@ -91,7 +89,7 @@
 	on:keypress={scroll}
 >
 	<Card class="grid animate-bounce-slow place-items-center text-2xl">
-		<iconify-icon icon="pajamas:scroll-down" class=" " />
+		<iconify-icon icon="pajamas:scroll-down" />
 	</Card>
 </div>
 

@@ -1,6 +1,6 @@
 <script>
 	import Card from './card.svelte';
-	import Icon from '@iconify/svelte';
+	import { typeWriter } from './typewriter';
 	export let project;
 </script>
 
@@ -13,10 +13,13 @@
 		<div
 			class="origin-top-left text-white transition-all duration-300 ease-in-out group-hover:scale-110"
 		>
-			<h2 class="mb font-space text-2xl font-bold leading-snug tracking-wide md:text-3xl">
+			<h2
+				use:typeWriter
+				class="mb font-space text-2xl font-bold leading-snug tracking-wide md:text-3xl"
+			>
 				{project.name}
 			</h2>
-			<h3 class="lowercase tracking-wider md:text-lg ">{project.role}</h3>
+			<h3 use:typeWriter class="lowercase tracking-wider md:text-lg ">{project.role}</h3>
 		</div>
 		<div class="rounded-full shadow-lg shadow-black/30">
 			<div
