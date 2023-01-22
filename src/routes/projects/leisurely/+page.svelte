@@ -1,10 +1,10 @@
 <script>
 	import { fade } from 'svelte/transition';
-	import ArrowLink from '../../../components/arrow-link.svelte';
-	import Card from '../../../components/card.svelte';
+	import ArrowLink from '$c/arrow-link.svelte';
+	import Card from '$c/card.svelte';
 	import { page } from '$app/stores';
-	import ProjectInfo from '../../../components/project-info.svelte';
-	import MoreProjects from '../../../components/more-projects.svelte';
+	import ProjectInfo from '$c/project-info.svelte';
+	import MoreProjects from '$c/more-projects.svelte';
 	import { projects } from '../../../projects';
 	let projectKey = 'leisurely';
 	let project = projects.find((x) => x.key === projectKey);
@@ -13,11 +13,6 @@
 <svelte:head>
 	<title>{project.name} | muellr</title>
 </svelte:head>
-<div
-	id="tint"
-	class="pointer-events-none fixed inset-0 -z-[49] h-screen w-screen bg-neutral-600 mix-blend-multiply"
-	transition:fade
-/>
 <div class="mx-auto flex w-full max-w-screen-2xl flex-col space-y-8 px-6">
 	<h1 class="w-full font-space text-5xl font-bold">{project.name}</h1>
 	<p class="!mt-2 w-full text-2xl text-cobalt-100 opacity-70">Student Project</p>

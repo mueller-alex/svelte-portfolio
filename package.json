@@ -42,6 +42,8 @@
 	},
 	"type": "module",
 	"dependencies": {
+		"@fontsource/inter": "^4.5.15",
+		"@fontsource/space-grotesk": "^4.5.13",
 		"@formkit/auto-animate": "^1.0.0-beta.1"
 	}
 }

@@ -2,7 +2,7 @@
 	import ProjectTile from '$c/project-tile.svelte';
 	import { projects } from '../projects';
 	import Home from '$c/home.svelte';
-	let shownProjects = projects.filter((x) => x.hidden == false);
+	let shownProjects = projects.filter((x) => !x.hidden);
 </script>
 
 <svelte:head>

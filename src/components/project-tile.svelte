@@ -1,6 +1,6 @@
 <script>
 	import Card from './card.svelte';
-	import Icon from '@iconify/svelte';
+	import { typeWriter } from './typewriter';
 	export let project;
 </script>
 
@@ -8,16 +8,18 @@
 	class="group relative flex aspect-square flex-col items-center justify-between overflow-clip rounded-[36px] p-6 !pb-0 transition-all duration-300 hover:border-white/[.15] active:translate-y-2 active:shadow-sm md:rounded-[48px] md:p-10"
 	backgroundColor={project.backgroundColor}
 	href="/projects/{project.key}"
-	noBlur
 >
 	<div class="flex w-full items-center justify-between">
 		<div
 			class="origin-top-left text-white transition-all duration-300 ease-in-out group-hover:scale-110"
 		>
-			<h2 class="mb font-space text-2xl font-bold leading-snug tracking-wide md:text-3xl">
+			<h2
+				use:typeWriter
+				class="mb font-space text-2xl font-bold leading-snug tracking-wide md:text-3xl"
+			>
 				{project.name}
 			</h2>
-			<h3 class="lowercase tracking-wider md:text-lg ">{project.role}</h3>
+			<h3 use:typeWriter class="lowercase tracking-wider md:text-lg ">{project.role}</h3>
 		</div>
 		<div class="rounded-full shadow-lg shadow-black/30">
 			<div

@@ -1,30 +1,17 @@
 <script lang="ts">
 	import { fade } from 'svelte/transition';
-	import ArrowLink from '../../../components/arrow-link.svelte';
-	import MoreProjects from '../../../components/more-projects.svelte';
-	import Card from '../../../components/card.svelte';
-	import ProjectInfo from '../../../components/project-info.svelte';
-	import ProjectCard from '../../../components/project-card.svelte';
-	import type { Project } from '../../../projects';
+	import ArrowLink from '$c/arrow-link.svelte';
+	import MoreProjects from '$c/more-projects.svelte';
+	import Card from '$c/card.svelte';
+	import ProjectInfo from '$c/project-info.svelte';
 	import { projects } from '../../../projects';
 	let projectKey = 'doglane';
 	let project = projects.find((x) => x.key === projectKey);
-	let innerWidth;
-	let shownProjects = projects
-		.filter((x) => x.hidden == false)
-		.filter((x) => x.key != projectKey)
-		.sort(() => Math.random() - 0.5)
-		.slice(0, 3);
 </script>
 
 <svelte:head>
 	<title>{project.name} | muellr</title>
 </svelte:head>
-<div
-	id="tint"
-	class="pointer-events-none fixed inset-0 -z-[49] h-screen w-screen bg-[#774a32] mix-blend-multiply"
-	transition:fade
-/>
 <div class="mx-auto flex w-full max-w-screen-2xl flex-col space-y-8 px-6">
 	<h1 class="w-full font-space text-5xl font-bold leading-tight">{project.name}</h1>
 	<p class="!mt-2 w-full text-2xl text-cobalt-100 opacity-70">School Project</p>
