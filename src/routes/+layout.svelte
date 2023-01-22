@@ -6,6 +6,10 @@
 	import Logo from '$c/logo.svelte';
 	import { page } from '$app/stores';
 	import { projects } from '../projects';
+	import '@fontsource/inter';
+	import '@fontsource/space-grotesk';
+	import '@fontsource/inter/variable.css';
+	import '@fontsource/space-grotesk/variable.css';
 	let y = 0;
 	let innerHeight = 0;
 	let bounce = false;
@@ -27,7 +31,9 @@
 		}
 	}
 </script>
-
+<svelte:head>
+	<meta name="theme-color" content={vantaColor} />
+</svelte:head>
 <svelte:window bind:scrollY={y} bind:innerHeight />
 <div
 	class="pointer-events-none fixed inset-0 -z-[49] h-screen w-screen mix-blend-multiply transition-colors duration-500 ease-in-out"

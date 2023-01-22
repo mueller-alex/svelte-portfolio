@@ -9,7 +9,7 @@ module.exports = {
 	theme: {
 		fontFamily: {
 			sans: [
-				'Inter var, Inter, sans-serif',
+				'InterVariable, Inter var, Inter, sans-serif',
 				{ fontFeatureSettings: "'ss02', 'ss01', 'cv06', 'cv11', 'cpsp', 'case'" }
 			]
 		},
@@ -43,7 +43,7 @@ module.exports = {
 			},
 			fontFamily: {
 				space: [
-					'Space Grotesk, sans-serif',
+					'Space GroteskVariable, Space Grotesk, sans-serif',
 					{
 						fontFeatureSettings: "'case', 'ss01'"
 					}
