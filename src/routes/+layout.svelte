@@ -5,7 +5,7 @@
 	import Card from '$c/card.svelte';
 	import Logo from '$c/logo.svelte';
 	import { page } from '$app/stores';
-	import { projects } from '../projects';
+	import projects from '$lib/projects';
 	import '@fontsource/inter';
 	import '@fontsource/space-grotesk';
 	import '@fontsource/inter/variable.css';
@@ -23,14 +23,20 @@
 		setTimeout(() => {
 			bounce = y == 0;
 		}, 5000);
-		if (pageName.includes('/projects')) {
-			const projectKey = pageName.split('/projects/')[1].split('/')[0];
-			vantaColor = projects.find((x) => x.key === projectKey).vantaColor;
+		// If the current page is a project page, set the background to the project's vanta color.
+		// Otherwise, use the default background color.
+		const projectPage = pageName.includes('/projects/');
+		if (projectPage) {
+			const projectId = pageName.split('/projects/')[1].split('/')[0];
+			const project = projects.find((x) => x.id === projectId);
+			// if the project has a vanta color, use it. Otherwise, use the default color.
+			vantaColor = project && project.meta.vantaColor ? project.meta.vantaColor : '#374262';
 		} else {
 			vantaColor = '#374262';
 		}
 	}
 </script>
+
 <svelte:head>
 	<meta name="theme-color" content={vantaColor} />
 </svelte:head>

@@ -1,10 +1,10 @@
-<script>
-	export let flexDirection = 'row';
+<script lang="ts">
 	import Card from './card.svelte';
-	export let classes = '';
+	export let flexDirection: 'row' | 'column' = 'row';
+	export let classes: string = '';
 	export { classes as class };
-	export let noGlass;
-	export let noBlur;
+	export let noGlass: boolean;
+	export let noBlur: boolean;
 	let icons = [
 		{
 			icon: 'majesticons:mail',

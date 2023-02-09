@@ -1,10 +1,10 @@
-<script>
-	export let icon = 'mingcute:arrow-right-fill';
-	export let text;
-	export let href;
-	export let underline = false;
-	export let rotate = false;
-	export let target = '_blank';
+<script lang="ts">
+	export let icon: string = 'mingcute:arrow-right-fill';
+	export let text: string;
+	export let href: string;
+	export let underline: boolean = false;
+	export let rotate: boolean = false;
+	export let target: string = '_blank';
 </script>
 
 <a
